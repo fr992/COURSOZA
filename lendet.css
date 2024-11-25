@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    height: auto; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scroll-behavior: smooth; 
+    background-color: #fff;
+    border: 2px solid #ddd;
+
+}
+
+.container {
+    height: 50px;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+    -webkit-scrollbar: none;
+}
+
+.container {
+    padding: 10px;
+    min-width: 509px;
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: scale(1.01);
+    background-color: rgb(65, 65, 65);
+}
