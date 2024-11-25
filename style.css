@@ -10,7 +10,7 @@ body {
     height: 200vh;
 }
 
-.button {
+.priv-button {
     background-color: blue;
     color: white;
     border: 2px solid grey;
@@ -22,17 +22,17 @@ body {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.button:hover {
+.priv-button:hover {
     background-color: darkblue;
     transform: scale(1.05);
 }
 
-.button:active {
+.priv-button:active {
     background-color: navy;
     transform: scale(0.95);
 }
 
-.navbar {
+.priv-navbar {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -44,7 +44,7 @@ body {
     background-color: black;
 }
 
-.navbar.fixed{
+.priv-navbar.fixed{
     transition: all 0.5s ease;
 }
 
@@ -55,36 +55,72 @@ body {
     position: fixed;
 }
 
-header .nav-name {
+header .priv-navname {
     flex: 1;
     display: flex;
     align-items: center;
 }
 
-header .navbar h2 {
+header .priv-navbar h2 {
     color: white;
     font-size: 2em;
-
 }
 
-.navbar ul {
+.priv-navbar ul {
     display: flex;
-    flex: 2;
+    flex: 4;
     list-style: none;
     padding: 0;
     margin: 0;
     gap: 20px;
-}
+} 
 
-.navbar ul li a {
+.priv-navbar ul li a {
     padding: 10px 20px;
     text-decoration: none;
     color: white;
     font-size: 1.5em;
 }
 
-.navbar .signin {
+.priv-navbar .priv-signin {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 }
+.subject-container {
+    display: flex;
+    height: auto; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scroll-behavior: smooth; 
+    background-color: #fff;
+    border: 2px solid #ddd;
+
+}
+
+.subject-container {
+    height: 50px;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+    -webkit-scrollbar: none;
+}
+
+.subject-container .subject {
+    padding: 10px;
+    min-width: 140px;
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.subject:hover {
+    transform: scale(1.01);
+    background-color: rgb(65, 65, 65);
+}
+
