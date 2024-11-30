@@ -7,28 +7,22 @@ body {
     background-color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    height: 200vh;
+
 }
 
-.priv-button {
-    background-color: blue;
+.login-logo {
+    margin-right: 5%;
     color: white;
-    border: 2px solid grey;
-    width: 120px;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 1rem;
+    font-size: 2.7rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: transform 0.2s;
 }
 
-.priv-button:hover {
-    background-color: darkblue;
-    transform: scale(1.05);
+.login-logo:hover {
+    transform: scale(1.01);
 }
 
-.priv-button:active {
-    background-color: navy;
+.login-logo:active {
     transform: scale(0.95);
 }
 
@@ -87,40 +81,76 @@ header .priv-navbar h2 {
     display: flex;
     justify-content: flex-end;
 }
-.subject-container {
-    display: flex;
-    height: auto; 
-    overflow-x: auto; 
-    white-space: nowrap; 
-    scroll-behavior: smooth; 
-    background-color: #fff;
-    border: 2px solid #ddd;
-
+.priv-signin i {
+    color: lightblue;
 }
 
-.subject-container {
-    height: 50px;
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
-    -webkit-scrollbar: none;
-}
-
-.subject-container .subject {
-    padding: 10px;
-    min-width: 140px;
-    width: auto;
-    height: 30px;
+.main-page{
+    height: 100vh;
+    background: linear-gradient(135deg, purple, black);
+    color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: grey;
-    color: white;
-    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-page .heading {
+    position: absolute;
+    top: 20%;
+    letter-spacing: 1.5px;
+    font-size: 3rem;
+}
+
+.main-container {
+    position: absolute;
+    bottom: 20%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.awards-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    height: 250px;
+    width: 270px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.awards-box:hover {
     cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.subject:hover {
-    transform: scale(1.01);
-    background-color: rgb(65, 65, 65);
+.awards-box i {
+    margin-top: 30px;
+    font-size: 3rem;
+    color: gold;
+    margin-bottom: 10px;
 }
 
+.awards-box h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.awards-box p {
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+
+@media (max-width:480px){
+    .awards-box {
+        width: 100%;
+    }
+}
