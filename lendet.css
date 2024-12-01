@@ -6,15 +6,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #74b9ff, #00cec9);
+  background: linear-gradient(135deg, purple,black);
   background-size: 300% 300%;
-  animation: gradientMove 10s ease infinite;
 }
 
 .container {
   width: 250%;
   max-width: 1300px;
-  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, purple,black);
   padding: 15px;
   border-radius: 25px;
   box-shadow: 0 100px 15px rgba(0, 0, 0, 0.2);
@@ -22,7 +21,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #007acc;
+  color: purple;
   margin-bottom: 20px;
 }
 
@@ -33,22 +32,16 @@ h1 {
 }
 
 .column {
-  background: #f1f1f1;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.column:hover {
-  
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} 
-
 .subject {
   padding: 10px;
   margin: 5px 0;
-  background: #007acc;
+  background:;
   color: white;
   text-align: center;
   border-radius: 5px;
@@ -56,5 +49,5 @@ h1 {
 }
 
 .subject:hover {
-  background: #005f99;
+  background: purple;
 }
