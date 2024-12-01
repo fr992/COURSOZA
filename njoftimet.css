@@ -3,27 +3,53 @@
     margine: 0;
     padding: 0;
     background-color: white;
- }
+  }
+  .priv-navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 90px;
+    width: auto;
+    padding: 10px 20px;
+    background-color: black;
+  }
+  .priv-navbar.fixed{
+    transition: all 0.5s ease;
+  }
+ 
+  header .priv-navname {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
 
- header{
-    background-color: #4CAF50;
+header .priv-navbar h2 {
     color: white;
-    padding: 15px 0;
-    text-align: center;
- }
-  nav ul{
+    font-size: 2em;
+  }
+
+.priv-navbar ul {
+    display: flex;
+    flex: 4;
     list-style: none;
     padding: 0;
-  }
+    margin: 0;
+    gap: 20px;
+  } 
 
-  nav ul li{
-    display: inline;
-    margin: 0 15px;
-  }
-
-  nav ul li a{
+.priv-navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+.priv-navbar .priv-signin {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 
   #notifications{
