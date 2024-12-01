@@ -1,0 +1,85 @@
+ body{
+    font-family: Arial, sans-serif;
+    margine: 0;
+    padding: 0;
+    background-color: white;
+  }
+  .priv-navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 90px;
+    width: auto;
+    padding: 10px 20px;
+    background-color: black;
+  }
+  .priv-navbar.fixed{
+    transition: all 0.5s ease;
+  }
+ 
+  header .priv-navname {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+header .priv-navbar h2 {
+    color: white;
+    font-size: 2em;
+  }
+
+.priv-navbar ul {
+    display: flex;
+    flex: 4;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+  } 
+
+.priv-navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+  }
+
+.priv-navbar .priv-signin {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #notifications{
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .notification{
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px gray;
+  }
+
+  .notification h3{
+    color: #333;
+  }
+
+  .notification{
+    color :#555;
+  }
+
+  footer{
+    position: relative;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+  }
