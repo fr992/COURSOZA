@@ -1,7 +1,27 @@
-<?php 
-include "database.php";
+<?php
 session_start();
+include "database.php";
+
+$username = 'admin';
+$email = 'admin@example.com';
+$dob = '2000-01-01';
+$password = password_hash('admin', PASSWORD_DEFAULT);
+$role = 'admin';
+
+
+$stmt = $conn->prepare("INSERT INTO users (username, email, dob, password, role) VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE password = VALUES(password), role = VALUES(role)");
+$stmt->bind_param("sssss", $username, $email, $dob, $password, $role);
+
+if ($stmt->execute()) {
+    echo "Admin user created or updated successfully.";
+} else {
+    echo "Error creating or updating admin user.";
+}
+
+$stmt->close();
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +63,9 @@ session_start();
         <label for="dob">Date of Birth:</label><br>
         <input type="date" name="dob" required><br>
         <label for="password">Password:</label><br>
-        <input type="password" name="password" required><br> <!-- required eshte validim ne HTML -->
+        <input type="password" name="password" required><br>
         <button type="submit" name="register">Register</button>
-        <button type="button" onclick="hapMbyll()">Back to Login</button> <!-- funksioni hapMbyll eshte per te hapur ose mbyllur login/register-->
+        <button type="button" onclick="hapMbyll()">Back to Login</button>
     </form>
 </div>
 
@@ -67,47 +87,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
             $stmt->store_result();
             if ($stmt->num_rows > 0) {
-                echo "Error: Emri ose Email ekzistojne.";
+                echo "Error: Username or Email already exists.";
             } else {
-                $stmt = $conn->prepare("INSERT INTO users (username, email, dob, password) VALUES (?, ?, ?, ?)");
+                $stmt = $conn->prepare("INSERT INTO users (username, email, dob, password, role) VALUES (?, ?, ?, ?, 'user')");
                 $stmt->bind_param("ssss", $username, $email, $dob, $hashed_password);
                 if ($stmt->execute()) {
-                    echo "Ti sapo u regjistrove";
-                    header("Location: index.html");
+                    echo "Registration successful.";
+                    header("Location: index.html"); 
+                    exit();
                 } else {
-                    echo "Error: nuk u regjistrove.";
+                    echo "Error: Registration failed.";
                 }
             }
             $stmt->close();
         } else {
-            echo "Mbushe te gjithe formen per t'u regjistruar.";
+            echo "Complete all fields to register.";
         }
     }
 
     if (isset($_POST['login'])) {
         if (!empty($username) && !empty($password)) {
-            $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = ?");
+            $stmt = $conn->prepare("SELECT id, password, role FROM users WHERE username = ?");
             $stmt->bind_param("s", $username);
             $stmt->execute();
             $stmt->store_result();
             if ($stmt->num_rows > 0) {
-                $stmt->bind_result($user_id, $hashed_password);
+                $stmt->bind_result($user_id, $hashed_password, $role);
                 $stmt->fetch();
                 if (password_verify($password, $hashed_password)) {
+                    
                     $_SESSION['user_id'] = $user_id;
                     $_SESSION['username'] = $username;
-                    header("Location: index.html");
+
+                   
+                    if ($username === 'admin' && $role === 'admin') {
+                        header("Location: crud-dashboard.php");
+                    } else {
+                        header("Location: index.html");
+                    }
                     exit();
                 } else {
-                    echo "Passwordi eshte gabim.";
+                    echo "Password is incorrect.";
                 }
             } else {
-                echo "Perdoruesi nuk ekziston. Regjistrohuni!";
+                echo "User does not exist. Please register.";
             }
             $stmt->close();
         } else {
-            echo "Vendosni emrin dhe passwordin per te hyre.";
+            echo "Enter username and password to login.";
         }
     }
 }
+
+
+$conn->close();
 ?>
