@@ -3,27 +3,27 @@
     margin: 0;
 }
 body {
-    line-height: 1.5;
-    background-color: white;
+    line-height: 1.2;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 
 }
 
 .login-logo {
-    margin-right: 5%;
+    margin-right: 4%;
     color: white;
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.5s;
 }
 
 .login-logo:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
+    color: orange;
 }
 
 .login-logo:active {
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 
 .priv-navbar {
@@ -31,22 +31,22 @@ body {
     justify-content: start;
     align-items: center;
     left: 0;
+    border-bottom: 1.6px solid black;
     top: 0;
-    height: 90px;
+    height: 75px;
     width: auto;
-    padding: 10px 20px;
-    background-color: black;
-}
-
-.priv-navbar.fixed{
-    transition: all 0.5s ease;
+    padding: 8px 16px;
+    background-color: rgb(34,34,34);
+    flex-wrap: wrap;
 }
 
 .fixed {
+    background-color: rgb(34,34,34);
     top: 0px;
     right: 0;
     left: 0;
     position: fixed;
+    z-index: 100;
 }
 
 header .priv-navname {
@@ -57,7 +57,7 @@ header .priv-navname {
 
 header .priv-navbar h2 {
     color: white;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .priv-navbar ul {
@@ -66,14 +66,40 @@ header .priv-navbar h2 {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 } 
 
 .priv-navbar ul li a {
-    padding: 10px 20px;
+    padding: 8px 16px;
     text-decoration: none;
     color: white;
-    font-size: 1.5em;
+    font-size: 0.95em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.priv-navbar ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.6px; /* Reduced by 20% */
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.priv-navbar ul li a:hover{
+    color: #f7b851;
+}
+
+.priv-navbar ul li a:hover::before{
+    transform: scale(1.05);
 }
 
 .priv-navbar .priv-signin {
@@ -82,13 +108,14 @@ header .priv-navbar h2 {
     justify-content: flex-end;
 }
 .priv-signin i {
-    color: lightblue;
+    color: white;
 }
 
 .main-page{
-    height: 100vh;
-    background: linear-gradient(135deg, purple, black);
-    color: white;
+    height: 80vh;
+    background: linear-gradient(135deg, #d98c11, #F7B851);
+    background-size: cover;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,61 +123,159 @@ header .priv-navbar h2 {
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding: 16px;
 }
 
 .main-page .heading {
     position: absolute;
-    top: 20%;
-    letter-spacing: 1.5px;
-    font-size: 3rem;
+    top: 5.6%;
+    margin: 16px;
+    letter-spacing: 1.2px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .main-container {
-    position: absolute;
-    bottom: 20%; 
+    padding-top: 40%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 16px;
 }
 
 .awards-box {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    height: 250px;
-    width: 270px;
+    border-radius: 12px;
+    padding: 16px;
+    height: 200px;
+    width: 216px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3.2px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .awards-box:hover {
     cursor: pointer;
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 4.8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .awards-box i {
-    margin-top: 30px;
-    font-size: 3rem;
-    color: gold;
-    margin-bottom: 10px;
+    margin-top: 24px;
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 8px;
 }
 
 .awards-box h3 {
-    font-size: 2rem;
-    margin: 10px 0;
+    font-size: 1.76rem;
+    margin: 8px 0;
 }
 
 .awards-box p {
-    font-size: 1.5rem;
-    opacity: 0.7;
+    font-size: 1.2rem;
 }
 
 
 @media (max-width:480px){
+    .priv-navbar ul {
+        gap: 8px;
+    }
+    
+    .priv-navbar ul li a {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+    
+    .main-page {
+        padding: 8px;
+    }
+    
+    .main-page .heading {
+        font-size: 1.2rem;
+        top: 8%;
+    }
+    
     .awards-box {
-        width: 100%;
+        width: 80%;
+        height: auto;
+        padding: 12px;
+    }
+    
+    .awards-box i {
+        font-size: 2rem;
+    }
+    
+    .awards-box h3 {
+        font-size: 0.96rem;
+    }
+    
+    .awards-box p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-page .heading {
+        font-size: 1.6rem;
+        top: 4%;
+     }
+    .awards-box {
+        width: 176px;
+        height: 160px;
+    }
+
+    .awards-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .awards-box p {
+        font-size: 0.96rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .priv-navbar {
+        padding: 12px 40px;
+    }
+
+    .priv-navbar ul {
+        gap: 32px;
+    }
+
+    .priv-navbar ul li a {
+        font-size: 1.44em;
+    }
+
+    .login-logo {
+        font-size: 2.4rem;
+    }
+
+    .main-page .heading {
+        font-size: 3.2rem;
+        top: 12%;
+    }
+
+    .main-container {
+        gap: 16px;
+        padding-top: 200px;
+    }
+
+    .awards-box {
+        width: 240px;
+        height: 200px;
+        padding: 12px;
+    }
+
+    .awards-box i {
+        font-size: 3.2rem;
+    }
+
+    .awards-box h3 {
+        font-size: 2rem;
+    }
+
+    .awards-box p {
+        font-size: 1.44rem;
     }
 }
