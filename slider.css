@@ -61,7 +61,10 @@
     display: flex;
     gap: 1.35rem;
     transition: transform 0.3s ease-in-out;
-    will-change: transform;
+    will-change: transform; 
+    /* perdoret per me optimizu performancen qe mos me pas
+    naj problem osht si lloj paralajmrimi qka ka me ndodh, "transform" osht emri i qati
+    seni qe pritet me ndodh qe nket rast u kon transformi */
 }
 
 .box {
