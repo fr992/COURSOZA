@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+.footer-wrapper {
+    background: orange;  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 1.7rem;
+    padding-bottom: 0rem;
+    position: relative;
+}
+
+.footer-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -34px;
+    left: 0;
+    width: 100%;
+    height: 34px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="orange" d="M0,96L80,80C160,64,320,32,480,32C640,32,800,64,960,64C1120,64,1280,32,1360,16L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>') no-repeat top center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+}
+
+.footer-wrapper .aboutus-box {
+    flex: 1;
+    padding: 1.3rem;
+    box-sizing: border-box;
+    min-width: 212px;
+}
+
+.footer-wrapper h5 {
+    color: #fff;
+    font-size: 2.125rem;
+    margin-bottom: 1.06rem;
+}
+
+.footer-wrapper .contact-info li {
+    list-style: none;
+}
+
+.footer-wrapper .contact-info li a {
+    color: black;
+    font-size: 1.19rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.footer-wrapper .contact-info li a:hover {
+    color: #fff;
+}
+
+.footer-wrapper .linkat-footer li {
+    list-style: none;
+}
+
+.footer-wrapper .linkat-footer li a {
+    color: black;
+    font-size: 1.19rem;
+    padding-left: 1.275rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+.footer-wrapper .linkat-footer li a:before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f0da";
+    font-weight: 900;
+    padding-right: 8.5px;
+    color: black;
+}
+
+.footer-wrapper .linkat-footer li a:hover {
+    color: #fff;
+    transform: scaleX(1.05);
+}
+
+.footer-wrapper .social-network {
+    display: flex;
+    gap: 0.85rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-wrapper .social-network li a {
+    text-decoration: none;
+    width: 2.125rem;
+    height: 2.125rem;
+    line-height: 2.1rem;
+    font-size: 0.85rem;
+    border: 0.106rem solid white;
+    color: black;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer-wrapper .social-network li a:hover {
+    background-color: black;
+    border-color: white;
+    color: #fff;
+    box-shadow: 0 0.531rem .796rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-0.159rem);
+}
+
+.footer-wrapper .dergoemail {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1.275rem;
+}
+
+.footer-wrapper .dergoemail input {
+    padding: 0.68rem 0.85rem;
+    font-size: 1.02rem;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: transparent;
+    color: #fff;
+}
+
+.footer-wrapper .dergoemail input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.footer-wrapper .dergoemail button {
+    padding: 0.68rem 1.275rem;
+    font-size: 1.02rem;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-wrapper .dergoemail button:hover {
+    background-color: #c0392b;
+}
+
+.footer-wrapper .footer-bottom {
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    text-align: center;
+    padding: 2.55rem 0;
+    font-size: 0.935rem;
+}
+
+.footer-wrapper .footer-bottom p {
+    margin: 0;
+    line-height: 0;
+}
+
+.footer-wrapper .footer-bottom a {
+    color: #fff;
+    font-weight: 600;
+    font-style: underline;
+}
+
+.jump-to-top {
+    position: fixed;
+    bottom: 1.7rem; 
+    right: 1.7rem; 
+    width: 2.975rem; 
+    height: 2.975rem; 
+    background-color: white;
+    color: black;
+    font-size: 1.7rem; 
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0.531rem 0.796rem 0 rgb(0 0 0 / 15%);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.jump-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.jump-to-top:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.jump-to-top:focus {
+    outline: none;
+}
+
+.jump-to-top svg {
+    width: 1.275rem; 
+    height: 1.275rem; 
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-wrapper h5 {
+        font-size: 1.7rem; 
+    }
+
+    .footer-wrapper .contact-info li a,
+    .footer-wrapper .linkat-footer li a,
+    .footer-wrapper .dergoemail input,
+    .footer-wrapper .dergoemail button {
+        font-size: 1.02rem; 
+    }
+
+    .footer-wrapper .dergoemail input {
+        width: 100%;
+    }
+
+    .footer-wrapper .social-network {
+        gap: 0.425rem; 
+    }
+
+    .footer-wrapper .social-network li a {
+        width: 1.7rem; 
+        height: 1.7rem; 
+        font-size: 0.76rem; 
+    }
+}

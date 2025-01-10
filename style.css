@@ -86,7 +86,7 @@ header .priv-navbar h2 {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 1.6px; /* Reduced by 20% */
+    height: 1.6px; 
     width: 100%;
     background-color: white;
     transform: scaleX(0);
@@ -279,3 +279,4 @@ header .priv-navbar h2 {
         font-size: 1.44rem;
     }
 }
+/* Reduced by 20% te qdo madhsi pershkak te zoomit ne gogole */ 
