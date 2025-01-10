@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 
 .footer-wrapper {
-    background: orange;  
+    background: orange; 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    padding-top: 1.7rem;
+    padding-top: 1.7rem; 
     padding-bottom: 0rem;
     position: relative;
 }
@@ -13,12 +13,12 @@
 .footer-wrapper::before {
     content: "";
     position: absolute;
-    top: -34px;
+    top: -34px; 
     left: 0;
     width: 100%;
-    height: 34px;
+    height: 34px; 
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="orange" d="M0,96L80,80C160,64,320,32,480,32C640,32,800,64,960,64C1120,64,1280,32,1360,16L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>') no-repeat top center;
-    background-size: cover;
+    background-size: cover; /* svg osht e gatshme per at wavy line te border nalt footerit */
     z-index: 1;
 }
 
@@ -27,20 +27,20 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 1.7rem;
+    gap: 1.7rem; 
 }
 
-.footer-wrapper .aboutus-box {
+.footer-wrapper .footer-section {
     flex: 1;
-    padding: 1.3rem;
+    padding: 1.3rem; 
     box-sizing: border-box;
-    min-width: 212px;
+    min-width: 212px; 
 }
 
 .footer-wrapper h5 {
     color: #fff;
-    font-size: 2.125rem;
-    margin-bottom: 1.06rem;
+    font-size: 2.125rem; 
+    margin-bottom: 1.06rem; 
 }
 
 .footer-wrapper .contact-info li {
@@ -49,7 +49,7 @@
 
 .footer-wrapper .contact-info li a {
     color: black;
-    font-size: 1.19rem;
+    font-size: 1.19rem; 
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -66,8 +66,8 @@
 
 .footer-wrapper .linkat-footer li a {
     color: black;
-    font-size: 1.19rem;
-    padding-left: 1.275rem;
+    font-size: 1.19rem; 
+    padding-left: 1.275rem; 
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -79,7 +79,7 @@
     font-family: "Font Awesome 6 Free";
     content: "\f0da";
     font-weight: 900;
-    padding-right: 8.5px;
+    padding-right: 8.5px; 
     color: black;
 }
 
@@ -90,18 +90,18 @@
 
 .footer-wrapper .social-network {
     display: flex;
-    gap: 0.85rem;
+    gap: 0.85rem; 
     list-style-type: none;
     padding: 0;
 }
 
 .footer-wrapper .social-network li a {
     text-decoration: none;
-    width: 2.125rem;
-    height: 2.125rem;
-    line-height: 2.1rem;
-    font-size: 0.85rem;
-    border: 0.106rem solid white;
+    width: 2.125rem; 
+    height: 2.125rem; 
+    line-height: 2.1rem; 
+    font-size: 0.85rem; 
+    border: 0.106rem solid white; 
     color: black;
     text-align: center;
     border-radius: 100%;
@@ -116,18 +116,18 @@
     border-color: white;
     color: #fff;
     box-shadow: 0 0.531rem .796rem 0 rgb(0 0 0 / 10%);
-    transform: translateY(-0.159rem);
+    transform: translateY(-0.159rem); 
 }
 
 .footer-wrapper .dergoemail {
     display: flex;
-    gap: 0.85rem;
-    margin-bottom: 1.275rem;
+    gap: 0.85rem; 
+    margin-bottom: 1.275rem; 
 }
 
 .footer-wrapper .dergoemail input {
-    padding: 0.68rem 0.85rem;
-    font-size: 1.02rem;
+    padding: 0.68rem 0.85rem; 
+    font-size: 1.02rem; 
     width: 70%;
     border-radius: 5px;
     border: 1px solid black;
@@ -141,8 +141,8 @@
 }
 
 .footer-wrapper .dergoemail button {
-    padding: 0.68rem 1.275rem;
-    font-size: 1.02rem;
+    padding: 0.68rem 1.275rem; 
+    font-size: 1.02rem; 
     background-color: #e74c3c;
     border: none;
     color: white;
@@ -160,8 +160,8 @@
     background-color: rgb(34, 34, 34);
     color: white;
     text-align: center;
-    padding: 2.55rem 0;
-    font-size: 0.935rem;
+    padding: 2.55rem 0; 
+    font-size: 0.935rem; 
 }
 
 .footer-wrapper .footer-bottom p {
@@ -172,7 +172,7 @@
 .footer-wrapper .footer-bottom a {
     color: #fff;
     font-weight: 600;
-    font-style: underline;
+    font-style: normal;
 }
 
 .jump-to-top {
@@ -229,7 +229,7 @@
     }
 
     .footer-wrapper .contact-info li a,
-    .footer-wrapper .linkat-footer li a,
+    .footer-wrapper .link-widget li a,
     .footer-wrapper .dergoemail input,
     .footer-wrapper .dergoemail button {
         font-size: 1.02rem; 
