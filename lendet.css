@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -6,14 +7,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, purple,black);
+  background: linear-gradient(135deg, #d98c11, #F7B851);
   background-size: 300% 300%;
 }
 
 .container {
   width: 250%;
   max-width: 1300px;
-  background: linear-gradient(135deg, purple,black);
+  background: linear-gradient(135deg, #d98c11, #F7B851);
   padding: 15px;
   border-radius: 25px;
   box-shadow: 0 100px 15px rgba(0, 0, 0, 0.2);
@@ -22,18 +23,18 @@ body {
 h1 {
   text-shadow: -1px 1px white,1px 1px white,1px -1px white,-1px -1px white;
   text-align: center;
-  color: purple;
+  color: orange;
   margin-bottom: 20px;
 }
 
 .table {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 25px;
 }
 
 .column {
-  color: rgba(179, 19, 139, 0.699);
+  background: linear-gradient(135deg, #d98c11, #F7B851);
   text-align: center;
   box-shadow: 0 4px 8px rgba(1,1,1,1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -50,5 +51,5 @@ h1 {
 }
 
 .subject:hover {
-  background: purple;
+  background: orange;
 }
