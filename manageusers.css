@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;  
+    padding: 20px 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    margin: 0;
+    font-size: 24px; 
+    text-align: center;
+    flex-grow: 1; 
+    color: white;
+}
+
+header .back-btn1{
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header .back-btn1:hover{
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Format */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Search Bar */
+form button[type="submit"] {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* User Table */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+table a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Delete Button */
+button.delete-button {
+    background-color: #dc3545;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0;
+}
+
+button.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Edit user sectoon */
+h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #6c757d;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+button .update-button {
+    width: 50px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive.. vazhdon */
+@media (max-width: 768px) {
+    form input, form button {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    form input[type="text"], form button[type="submit"] {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}

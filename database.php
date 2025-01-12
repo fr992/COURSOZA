@@ -4,16 +4,15 @@
     $db_password = "";
     $db_name = "lidhjatest";
 
-    $conn = "";
+    $conn = ""; 
+    // veq e inicializojme niher null tani e inicializojm posht me lidhje qe mos me pas naj error/konflikt
 
     $conn = mysqli_connect($db_server, 
                 $db_user, $db_password, 
                 $db_name);
 
     if($conn->connect_error){
-        echo"You're not connected";
+        echo"Couldn't connect.";
         die("Connection failed: " . $conn->connect_error);
-    } else {
-        echo "Connected successfully!". "<br>";
-    }
+    } 
 ?>
