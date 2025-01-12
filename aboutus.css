@@ -1,0 +1,76 @@
+.about-us {
+    padding-top: 4.5px; 
+    padding-bottom: 45px; 
+    padding-left: 22.5px; 
+    padding-right: 22.5px; 
+    background: linear-gradient(to bottom,#d98c11, #F7B851);
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+.about-us h2 {
+    font-size: 3.15rem; 
+    color: black; 
+    margin-bottom: 27px; 
+}
+
+.about-us p {
+    font-size: 1.35rem; 
+    line-height: 1.62; 
+    max-width: 810px; 
+    margin: 0 auto 27px; 
+    color: black;
+}
+
+.about-us .aboutus-box {
+    font-size: 1.17rem; 
+    color: white;
+    margin-top: 45px; 
+    padding: 18px; 
+    background-color: rgba(0, 0, 0, 0.149);
+    border: 1.8px solid black; 
+    border-radius: 9px; 
+    width: 72%; 
+    margin: 0 auto;
+}
+
+.about-us .aboutus-box h3 {
+    font-size: 1.8rem; 
+    color: white;
+}
+
+.about-us .team-section {
+    display: flex;
+    justify-content: center;
+    gap: 27px; 
+    margin-top: 45px; 
+}
+
+.about-us .team-member {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 27px; 
+    border-radius: 13.5px; 
+    box-shadow: 0 3.6px 13.5px rgba(0, 0, 0, 0.5); 
+    max-width: 225px; 
+}
+
+.about-us .team-member img {
+    border-radius: 50%;
+    width: 135px; 
+    height: 135px; 
+    margin-bottom: 18px; 
+    box-shadow: 0 3.6px 13.5px rgba(0, 0, 0, 0.5); 
+}
+
+.about-us .team-member h4 {
+    font-size: 1.35rem; 
+    color: black;
+    margin-bottom: 9px; 
+}
+
+.about-us .team-member p {
+    font-size: 0.9rem; 
+    color: black;
+}

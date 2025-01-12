@@ -1,0 +1,127 @@
+:root {
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+    --transition-1: 350ms ease;
+    --transition-2: 600ms ease;
+}
+
+.highlights-section{
+    background: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 1.8rem;
+    padding-bottom: 2.1rem;
+    position: relative;
+}
+
+.highlights-section::before{
+    content: "";
+    position: absolute;
+    top: -36px;
+    left: 0;
+    width: 100%;
+    height: 36px; /* kjo o per svg wave qe e kem ma posht, per lartsi */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="white" d="M0,96L80,80C160,64,320,32,480,32C640,32,800,64,960,64C1120,64,1280,32,1360,16L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>') no-repeat top center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.section-header{
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    background: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.45rem 2.7rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 100%, 0 100%, 7% 50%, 0 0);
+    box-shadow: 0 3.6px 5.4px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+    margin: 0 auto 1.8rem auto;
+}
+
+.slider-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    gap: 1.35rem;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform; 
+    /* perdoret per me optimizu performancen qe mos me pas
+    naj problem osht si lloj paralajmrimi qka ka me ndodh, "transform" osht emri i qati
+    seni qe pritet me ndodh qe nket rast u kon transformi */
+}
+
+.box {
+    padding: 1.8rem;
+    margin: 27px 0;
+    margin-left: 18px;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -0.9rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    width: 22.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3 ease;
+    border-radius: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+.box:hover{
+    outline: var(--outline-hover);
+    outline-offset: -0.45rem;
+    transform: scale(0.95);
+    z-index: 10;
+}
+
+.box img{
+    margin: 0.9rem 0;
+    height: 13.5rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.45rem;
+}
+
+.box h3 {
+    font-size: 1.8rem;
+    line-height: 1.62;
+    color: var(--black);
+}
+
+.box p{
+    font-size: 1.26rem;
+    line-height: 1.44;
+    color: var(--light-color);
+    padding: 0.9rem 0;
+}
+
+@media (max-width: 768px){
+    .box {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 480px){
+    .box {
+        width: 13.5rem;
+    }
+}
+
+/* duhet me i permirsu  me i bo responsive */
