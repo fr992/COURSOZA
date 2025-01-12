@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 // verifikimi i adminit
                     if($role === ROLE_ADMIN) {
-                        header("Location: admin.php");
+                        header("Location: dashboard.php");
                         exit; // si return ne java
                     } else {
                         header("Location: index.html");
@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         } else if (!empty($username) && !empty($dob) && !empty($password)) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $conn->prepare("INSERT INTO users (username, email, dob, password, role) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss", $username, $email, $dob, $hashed_password, ROLE_USER);
+            $stmt->bind_param("sssss", $username, $email, $dob, $hashed_password, 'ROLE_USER');
             if ($stmt->execute()) {
                 echo "Registration successful.";
                 header("Location: index.html");
