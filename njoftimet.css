@@ -1,19 +1,21 @@
  body{
     font-family: Arial, sans-serif;
-    margine: 0;
+    margin: 0;
     padding: 0;
     background-color: white;
+    color: #333;
   }
   .priv-navbar {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-    left: 0;
-    top: 0;
-    height: 90px;
-    width: auto;
     padding: 10px 20px;
-    background-color: black;
+    background-color: #333;
+    color: white;
+    position :sticky;
+    top:0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0, 0, 0.1);
   }
   .priv-navbar.fixed{
     transition: all 0.5s ease;
@@ -54,24 +56,59 @@ header .priv-navbar h2 {
 
   #notifications{
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+  #notifications h2{
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .category-title{
+    color: #555;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
   }
 
   .notification{
     background-color: white;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px gray;
+    border-radius: 5px;
+    border-left: 5px solid purple;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .notification:hover{
+    transform: translateY(-3px);
+    background-color: rgba(250, 220, 250, 0.667);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   }
 
+  
   .notification h3{
+    margin: 0 0 10px;
     color: #333;
   }
 
-  .notification{
+  .notification p{
+    margin: 0;
     color :#555;
+  }
+  .full-text {
+    display: none;
+    margin-top: 10px;
+    color: #333;
+  }
+  .hidden {
+    display: none;
   }
 
   footer{
