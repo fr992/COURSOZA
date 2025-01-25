@@ -68,14 +68,7 @@ header .priv-navbar h2 {
     color: #555;
     margin-bottom: 20px;
   }
-  .category-title{
-    color: #555;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #555;
-    padding-bottom: 5px;
-  }
-
+ 
   .notification{
     background-color: white;
     margin-bottom: 15px;
@@ -102,15 +95,27 @@ header .priv-navbar h2 {
     margin: 0;
     color :#555;
   }
-  .full-text {
-    display: none;
-    margin-top: 10px;
-    color: #333;
+  .notification .time {
+    font-size: 0.9em;
+    color: gray;
   }
-  .hidden {
-    display: none;
-  }
+  #search-bar {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+  }  
 
+  #notifications .short-text {
+    font-weight: bold;
+    color: #000000;
+    
+  }
+  
   footer{
     position: relative;
     background-color: #333;
