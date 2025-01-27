@@ -16,11 +16,17 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="course.css">
 </head>
 <body>
+<a href="javascript:history.back()" class="back-button">Shko Mbrapa</a>
     <header>
         <div class="priv-navbar">
             <div class="priv-navname">
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
     </header>
+    </div>
+            <ul class="nav-links">
+                <li><a href="ligjeratat.php">Ligjeratat</a></li>
+            </ul>
+            </div>
     <form action="select_course.php" method="POST">
     <label for="course_select">Zgjidh Lenden:</label>
     <select id="course_select" name="course_id">
