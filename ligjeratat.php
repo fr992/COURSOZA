@@ -38,7 +38,7 @@ $conn->close();
     <title>Ligjeratat</title>
 </head>
 <body>
-<a href="javascript:history.back()" class="back-button">Shko Mbrapa</a>
+<a href="javascript:history.back()" class="back-button">←</a>
 <div class="priv-navbar">
             <div class="priv-navname">
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
@@ -82,7 +82,7 @@ body {
     border-bottom: 1.6px solid black;
     top: 0;
     height: 75px;
-    width:87%;
+    width:100%;
     padding: 8px 16px;
     background-color: rgb(34,34,34);
     flex-wrap: wrap;
@@ -90,8 +90,8 @@ body {
   }
   .back-button {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 90px;
+    left: 0px;
     padding: 10px 20px;
     background-color: #d98c11;
     color: white;

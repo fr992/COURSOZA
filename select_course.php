@@ -10,7 +10,7 @@ include 'databaza.php';
     <title>Zgjidh Ligjeraten</title>
 </head>
 <body>
-<a href="javascript:history.back()" class="back-button">Shko Mbrapa</a>
+<a href="javascript:history.back()" class="back-button">←</a>
     <h1>Zgjidh Ligjeraten</h1>
     <form action="ligjeratat.php" method="GET"> 
         <label for="lenda_id">Lendet:</label>
@@ -41,12 +41,12 @@ include 'databaza.php';
 }
 .back-button {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
+    top: 0px;
+    left: 0px;
+    padding: 10px 30px;
     background-color: #d98c11;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
