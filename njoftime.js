@@ -13,7 +13,12 @@ document.getElementById('search-bar').addEventListener('input', function(){
         }
 
     });
+    if(!hasMatch && searchValue.length > 0) {
+        alert("Nuk u gjeten njoftime qe perputhen me kerkimin tuaj ");
+    }
 });
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
