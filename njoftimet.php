@@ -22,7 +22,7 @@ $result = $conn->query($sql);
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-linksS">
                 <li><a href="index.html">Ballina</a></li>
                 <li><a href="lendet.html">Lendet</a></li>
                 <li><a href="njoftimet.html" class="active">Njoftimet</a> </li>
@@ -42,11 +42,11 @@ $result = $conn->query($sql);
             </div>
         <?php endwhile; ?>
     <?php else: ?>
-        <p>Ende nuk ka njoftime.</p>
+        <p>Ende nukkka njoftime.</p>
     <?php endif; ?>   
     </section>
     <footer>
-    <p>Copyright <a href="#">© WWW.COURSOZA.</a> All Rights Reserved</p>
+    <p>Copyright <a href="#">© WWW.COURSOZ.</a> All Rights Reserved</p>
     </footer>
     <script src="njoftime.js"></script>
 </body>
