@@ -46,7 +46,7 @@ $result = $conn->query($sql);
     <?php endif; ?>   
     </section>
     <footer>
-        <p>&copy; 2024 UBT-Higher Education Institucion</p>
+    <p>Copyright <a href="#">© WWW.COURSOZA.</a> All Rights Reserved</p>
     </footer>
     <script src="njoftime.js"></script>
 </body>

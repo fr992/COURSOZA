@@ -1,57 +1,64 @@
  body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: #333;
+  line-height: 1.2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
   }
   .priv-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    position :sticky;
-    top:0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0, 0, 0.1);
+    border-bottom: 1.6px solid black;
+    height: 75px;
+    padding: 0px 20px;
+    background-color: rgb(34, 34,34);
+    position :relative;
   }
-  .priv-navbar.fixed{
-    transition: all 0.5s ease;
-  }
- 
-  header .priv-navname {
-    flex: 1;
-    display: flex;
-    align-items: center;
+  
+
+  .priv-navname {
+    position: absolute;
+    left: 20px;
   }
 
-header .priv-navbar h2 {
+  .priv-navbar h2 {
     color: white;
-    font-size: 2em;
+    font-size: 1.6em;
+    margin: 0;
   }
 
-.priv-navbar ul {
+  .nav-links {
     display: flex;
-    flex: 4;
     list-style: none;
     padding: 0;
     margin: 0;
     gap: 20px;
   } 
 
-.priv-navbar ul li a {
-    padding: 10px 20px;
+  .nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    position: relative;
+    padding: 8px 16px;
+    transition: color 0.3s ease-in-out;
   }
-
-.priv-navbar .priv-signin {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+  .nav-links li a:hover{
+    color: #F7B851;
+  }
+  .nav-links li a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.6px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+  }
+  .nav-links li a:hover::before{
+    transform: scaleX(1);
   }
 
   #notifications{
