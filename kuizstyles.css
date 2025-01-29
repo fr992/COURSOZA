@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #d98c11, #F7B851);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.priv-navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 72px;
+    padding: 8px 16px;
+    background-color: rgb(34, 34, 34);
+    z-index: 100;
+    border-bottom: 1.6px solid black;
+    flex-wrap: wrap;
+}
+
+header .priv-navname {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+header .priv-navbar h2 {
+    color: white;
+    font-size: 1.6em;
+}
+
+.priv-navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 25rem;
+    margin-left: 20px;
+}
+
+.priv-navbar ul li a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.priv-navbar ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.6px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.priv-navbar ul li a:hover {
+    color: #F7B851;
+}
+
+.priv-navbar ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+.subject-selection {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.subject-selection h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.subject-selection form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subject-selection select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.subject-selection select:focus {
+    border-color: #F7B851;
+    outline: none;
+}
+
+.subject-selection button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.subject-selection button:hover {
+    background-color: #0056b3;
+}
+
+.subject-selection button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+}
+
+.quiz-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .priv-navbar {
+        padding: 8px 10px;
+    }
+
+    .subject-selection {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
