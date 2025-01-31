@@ -44,7 +44,7 @@ $conn->close();
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="ligjeratat.php">Ligjeratat</a></li>
+                <li><a href="index.html">Ballina</a></li>
             </ul>
             </div>
     <h1>Ligjeratat</h1>
