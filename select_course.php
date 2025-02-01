@@ -57,7 +57,6 @@ body {
     top:0;
     left: 0;
     right 0;
-    border-bottom: 1.6px solid black;
     height: 75px;
     width: auto;
     padding: 10px 683px;
@@ -72,7 +71,7 @@ header .priv-navbar h2 {
 
 .priv-navbar ul {
     display: flex;
-    flex: 4;
+    flex: 1;
     list-style: none;
     padding: 0;
     margin: 0;

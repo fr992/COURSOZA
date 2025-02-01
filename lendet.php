@@ -103,13 +103,12 @@ header .priv-navbar {
     align-items: center;
     height: 75px;
     position: relative;
-    border-bottom: 1px solid black;
     flex-wrap: wrap;
 }
 
 header .priv-navname {
     position: absolute;
-    left: 55px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
 }

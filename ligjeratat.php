@@ -87,9 +87,14 @@ body {
     flex-wrap: wrap;
     position: fixed;
   }
-  .priv-name h2{
-    color:white;
-  }
+ .priv-navname h2 {
+    color: white;
+    font-size: 1.8em;
+}
+
+ .priv-navname h2 span {
+    color: orange;
+}
 .priv-navbar ul {
     display: flex;
     list-style: none;
