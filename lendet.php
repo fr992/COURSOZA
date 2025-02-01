@@ -16,6 +16,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <header>
+    <a href="javascript:history.back()" class="back-button">←</a>
         <div class="priv-navbar">
             <div class="priv-navname">
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
@@ -73,12 +74,17 @@ $result = $conn->query($sql);
 $conn->close();
 ?>
 <style>
-  body {
-    line-height: 1.2;
-    font-family: sans-serif;
-    font-weight: 400;
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d98c11, #F7B851);
+    background-size: 300% 300%;
 }
 
 header {
@@ -103,7 +109,7 @@ header .priv-navbar {
 
 header .priv-navname {
     position: absolute;
-    left: 16px;
+    left: 55px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -159,10 +165,11 @@ header .priv-navname h2 span {
 
 a.back-button {
     color: white;
-    font-size: 1.5rem;
+    padding:12px 20px;
+    font-size: 2.5rem;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 90px;
+    left: 0px;
     text-decoration: none;
     z-index: 10;
 }
