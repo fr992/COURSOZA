@@ -34,7 +34,7 @@ if(!$questions){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuiz: <?php htmlspecialchars($subject_ndarja[$subject_id]['name']); ?></title>
-    <link rel="stylesheet" href="kuizstyles.css">
+    <link rel="stylesheet" href="stilizimi/kuizstyles.css">
 </head>
 <body>
     <header>
