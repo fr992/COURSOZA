@@ -170,7 +170,7 @@
         <a href="manageusers.php" onclick="gotoUsersManage()">Manage Users</a>
         <a href="">Reports</a>
         <a href="">Lendet</a>
-        <a href="">Materiali</a>
+        <a href="ushtrimeadmin.php">Materiali</a>
         <a href="">Settings</a>
         <a href="" onclick="boLogout()">Logout</a>
     </div>
