@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Të gjitha fushat janë të detyrueshme.");
     }
 
-    $upload_dir = "uploads/";
+    $upload_dir = "postlendet/";
     $file_path = $upload_dir . basename($file["name"]);
 
     if (move_uploaded_file($file["tmp_name"], $file_path)) {
