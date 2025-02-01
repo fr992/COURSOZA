@@ -1,5 +1,5 @@
 <?php 
-require 'kuizdatabase.php';
+require 'LidhjaDatabaza/kuizdatabase.php';
 
 $subject_ndarja = [
     '1' => ['name' => 'Databaza', 'start' => 0, 'end' => 25],

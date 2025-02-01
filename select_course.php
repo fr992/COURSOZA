@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php'; 
+include 'LidhjaDatabaza/databaza.php'; 
 ?>
 
 <!DOCTYPE html>

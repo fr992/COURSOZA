@@ -1,6 +1,6 @@
 <?php
 
-include 'dbe.php';
+include 'LidhjaDatabaza/dbe.php';
 
 $sql = "SELECT titulli, short_text, full_text, koha_publikimit FROM njoftimet ORDER BY id DESC";
 $result = $conn->query($sql);

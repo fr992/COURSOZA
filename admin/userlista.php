@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+include 'LidhjaDatabaza/database.php';
 
 // merri user nga databaza
 $sql = "SELECT * FROM users";

@@ -1,6 +1,6 @@
 <?php
 
-include 'dbe.php';
+include 'LidhjaDatabaza/dbe.php';
 
 if($_SERVER["REQUEST_METHOD"]==="POST"){
     $titulli = $_POST["titulli"];

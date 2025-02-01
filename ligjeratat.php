@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php'; 
+include 'LidhjaDatabaza/databaza.php'; 
 
 
 if (isset($_GET['lenda_id'])) {

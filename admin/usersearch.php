@@ -1,6 +1,6 @@
 <?php
 // include i lidhjes
-include 'database.php';
+include 'LidhjaDatabaza/database.php';
 
 // me fshi user
 if (isset($_POST['delete'])) {

@@ -1,5 +1,5 @@
 <?php 
-include 'ushtrimedb.php'; // lidhja me databaz
+include 'LidhjaDatabaza/ushtrimedb.php'; // lidhja me databaz
 
 $subjects = [
     "Matematik 1",

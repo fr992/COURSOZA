@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php'; 
+include 'LidhjaDatabaza/databaza.php'; 
 
 
 $sql = "SELECT * FROM lendet ORDER BY created_at DESC";

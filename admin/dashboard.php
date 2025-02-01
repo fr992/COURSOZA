@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'database.php';
+    include 'LidhjaDatabaza/database.php';
 
     $conn = new mysqli("localhost", "root", "", "lidhjatest");
     if($conn->connect_error){

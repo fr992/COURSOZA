@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php';
+include 'LidhjaDatabaza/databaza.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lenda_id = $_POST['lenda_id'];
