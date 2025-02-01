@@ -91,7 +91,7 @@ if (isset($_POST['delete'])) {
                     <td><?php echo htmlspecialchars($row['email']); ?></td>
                     <td><?php echo htmlspecialchars($row['dob']); ?></td>
                     <td>
-                        <a href="userlista.php?id=<?php echo $row['id']; ?>">Edit</a>
+                    <a href="userlista.php?id=<?php echo $row['id']; ?>&search=<?php echo urlencode($_GET['search'] ?? ''); ?>">Edit</a>
                         <form method="POST" style="display:inline; padding: 0px; margin-left: 7px;" onsubmit="return confirm('Are you sure you want to delete this user?');">
                             <input type="hidden" name="user_id" value="<?php echo $row['id']; ?>">
                             <button type="submit" name="delete" class="delete-button">Delete</button>
@@ -106,39 +106,50 @@ if (isset($_POST['delete'])) {
     </table>
 
     <?php 
-    // nese edit id eshte marre me shfaq edit formen
-    if(isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $sql = "SELECT * FROM users WHERE id = ?";
-        $stmt = $conn->prepare($sql);
-        if(!$stmt) {
-            die("Error: " . $conn->error);
-        }
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
-
-        if($user) {
-            ?> 
-            <h2>Edit User</h2>
-            <form method="POST">
-                <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" value="<?php echo htmlspecialchars($user['username']); ?>" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($user['email']); ?>" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required><br><br>
-                <label for="dob">Date of Birth:</label>
-                <input type="date" name="dob" id="dob" value="<?php echo htmlspecialchars($user['dob']); ?>" required><br><br>
-                <button class="update-button" type="submit" name="update">Update User</button>
-            </form>
-            <?php
-        } else {
-            echo "<p>User doesn't exist.</p>";
-        }
+// Kontrollojme nese ekziston nje ID per editim
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM users WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    
+    if(!$stmt) {
+        die("Error: " . $conn->error);
     }
-    ?>
+
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+    
+    if($user) {
+        // Ruaj search query nese eshet aktiv
+        $searchQuery = isset($_GET['search']) ? '&search=' . urlencode($_GET['search']) : '';
+        ?> 
+        <h2>Edit User</h2>
+        <form method="POST">
+            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="<?php echo htmlspecialchars($user['username']); ?>" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($user['email']); ?>" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob" value="<?php echo htmlspecialchars($user['dob']); ?>" required><br><br>
+
+            <button class="update-button" type="submit" name="update">Update User</button>
+            <a href="userlista.php" class="cancel-button" style="text-decoration: none;">Cancel</a>
+        </form>
+        <?php
+    } else {
+        echo "<p>User doesn't exist.</p>";
+    }
+}
+?>
+
 </body>
 </html>
