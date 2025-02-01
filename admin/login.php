@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "database.php";
+include "admin/database.php";
 
 // i rujm do raste si variabla qe me mujt me bo ekzekutim me JS alert nese ka ndonje error
 $loginError = false;
@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 // verifikimi i adminit
                     if($role === ROLE_ADMIN) {
-                        header("Location: dashboard.php");
+                        header("Location: admin/dashboard.php");
                         exit; // si return ne java
                     } else {
                         header("Location: index.html");
