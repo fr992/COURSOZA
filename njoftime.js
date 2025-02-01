@@ -1,13 +1,14 @@
 document.getElementById('search-bar').addEventListener('input', function(){
     var searchValue = this.value.toLowerCase();
     var notifications = document.querySelectorAll('.notification');
-
+    var hasMatch = false;
     notifications.forEach(function(notification) {
         var title = notification.querySelector('h3').textContent.toLocaleLowerCase();
         var shortText = notification.querySelector('p').textContent.toLocaleLowerCase();
 
         if (title.includes(searchValue) || shortText.includes(searchValue)) {
             notification.style.display = '';
+            hasMatch = true;
         } else {
             notification.style.display = 'none';
         }
