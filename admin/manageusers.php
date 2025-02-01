@@ -4,24 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // lidhja me databaz
-include 'LidhjaDatabaza/database.php';
+include ('../LidhjaDatabaza/database.php');
 
-
-// kerkimi behet ketu
-$searchTerm = "";
-if (isset($_POST['search'])) {
-    $searchTerm = '%' . $_POST['search'] . '%';
-    $sql = "SELECT * FROM users WHERE username LIKE ? OR email LIKE ?";
-    $stmt = $conn->prepare($sql);
-    if (!$stmt) {
-        die('Error: ' . $conn->error);
-    }
-    $stmt->bind_param("ss", $searchTerm, $searchTerm);
-    $stmt->execute();
-    $result = $stmt->get_result();
-} else {
-    $result = $conn->query("SELECT * FROM users");
-}
 
 // regjistrimi prej anes se adminit (dashboard)
 if (isset($_POST['register'])) {
@@ -63,7 +47,7 @@ if (isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="manageusers.css">
+    <link rel="stylesheet" href="../stilizimi/manageusers.css">
     <title>Manage Users</title>
     <style>
         header {
@@ -108,12 +92,6 @@ if (isset($_POST['register'])) {
         <input placeholder="Password" type="password" name="password" id="password" required><br><br>
         <input placeholder="Date of Birth" type="date" name="dob" id="dob" required><br><br>
         <button type="submit" name="register">Register</button>
-    </form>
-
-    <h2>Search Users</h2>
-        <form method="GET" action="usersearch.php">
-        <input type="text" name="search" placeholder="Search by Username or Email" value="<?php echo htmlspecialchars($searchTerm); ?>">
-        <button type="submit">Search</button>
     </form>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 
 
-include 'LidhjaDatabaza/ushtrimedb.php'; // lidhja db
+include '../LidhjaDatabaza/ushtrimedb.php'; // lidhja db
 // postimi i file edhe validimi
 
 

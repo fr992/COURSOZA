@@ -56,19 +56,22 @@ if(isset($_GET['subject'])) {
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Files per <?= htmlspecialchars($subject) ?></h1>
-        <?php if ($contents): ?>
-            <?php foreach ($contents as $row): ?>
-                <div class="content-item">
+<div class="container">
+    <h1>Files per <?= htmlspecialchars($subject) ?></h1>
+    <?php if ($contents): ?>
+        <?php foreach ($contents as $row): ?>
+            <div class="content-item">
                 <h3><?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8') ?></h3>
                 <p><?= nl2br(htmlspecialchars($row['text'], ENT_QUOTES, 'UTF-8')) ?></p>
-                <a href="<?= htmlspecialchars($row['file_path'], ENT_QUOTES, 'UTF-8') ?>">Download File</a>
+                <a href="<?= htmlspecialchars('admin/' . $row['file_path'], ENT_QUOTES, 'UTF-8') ?>" download>
+                    Download File
+                </a>
             </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>S'ka postime per kete lende.</p>
-        <?php endif; ?>
-    </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>S'ka postime per kete lende.</p>
+    <?php endif; ?>
+</div>
+
 </body>
 </html>

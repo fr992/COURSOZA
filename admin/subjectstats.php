@@ -1,5 +1,5 @@
 <?php 
-include 'LidhjaDatabaza/ushtrimedb.php'; // lidhja me databaz
+include ('../LidhjaDatabaza/ushtrimedb.php'); // lidhja me databaz
 
 $subjects = [
     "Matematik 1",
@@ -109,7 +109,7 @@ foreach($subjects as $subject) {
         <a href="dashboard.php" class="back-btn1">Back</a>
         <h1>Subject Post Statistics</h1>
     </header>
-    <h2>Postimet per Lende</h2>
+    <h2>Postimet per Lende(Ushtrimet)</h2>
     <ul>
         <?php foreach ($subjectCounts as $subject => $count): ?>
             <li>

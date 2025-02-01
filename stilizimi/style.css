@@ -9,7 +9,7 @@ body {
 }
 
 .login-logo {
-    margin-right: 4%;
+    margin-right: 10%;
     color: white;
     font-size: 2.16rem;
     cursor: pointer;
@@ -224,6 +224,7 @@ header .priv-navbar h2 {
 @media (min-width: 1200px) {
     .priv-navbar {
         padding: 12px 40px;
+        padding-left: 50px;
     }
 
     .priv-navbar ul {

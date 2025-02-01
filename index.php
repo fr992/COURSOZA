@@ -1,3 +1,7 @@
+<?php 
+    //....
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -164,11 +168,11 @@
             <div class="footer-section">
                 <h5>Quick Links</h5>
                 <ul class="linkat-footer">
-                    <li><a href="#">w3.schools</a></li>
-                    <li><a href="#">freecodecamp.org</a></li>
-                    <li><a href="#">uiverse.io</a></li>
-                    <li><a href="#">algorithms.st</a></li>
-                    <li><a href="#">cse-course.net</a></li>
+                    <li><a href="https://www.w3schools.com/">w3.schools</a></li>
+                    <li><a href="https://www.freecodecamp.org/">freecodecamp.org</a></li>
+                    <li><a href="https://uiverse.io/">uiverse.io</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/data-structures/">Data Structures</a></li>
+                    <li><a href="https://www.gu.se/en/computer-science-engineering">University of Gothenburg</a></li>
                 </ul>
             </div>
             <div class="footer-section">

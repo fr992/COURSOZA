@@ -90,7 +90,11 @@ form button[type="submit"] {
     padding: 10px;
     display: inline-block;
 }
-
+form .searchreset{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+}
 /* User Table */
 table {
     width: 90%;

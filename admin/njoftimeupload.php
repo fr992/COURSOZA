@@ -1,6 +1,6 @@
 <?php
 
-include 'LidhjaDatabaza/dbe.php';
+include '../LidhjaDatabaza/dbe.php';
 
 if($_SERVER["REQUEST_METHOD"]==="POST"){
     $titulli = $_POST["titulli"];
@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             color: #333;
         }
         .container {
-            max_width: 800;
+            max-width: 800;
             margin: 40px auto;
             background-color: white;
             padding: 30px;
@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             text-align: center;
             color: orange;
             font-size: 2em;
-            margin-botttom: 30px
+            margin-bottom: 30px
         }
         form {
             display: flex;

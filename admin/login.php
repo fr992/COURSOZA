@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "LidhjaDatabaza/database.php";
+include ('../LidhjaDatabaza/database.php');
 
 // i rujm do raste si variabla qe me mujt me bo ekzekutim me JS alert nese ka ndonje error
 $loginError = false;

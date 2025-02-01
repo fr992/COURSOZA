@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'LidhjaDatabaza/database.php';
+    include ('../LidhjaDatabaza/database.php');
 
     $conn = new mysqli("localhost", "root", "", "lidhjatest");
     if($conn->connect_error){
@@ -167,9 +167,10 @@
     <div class="sidebar">
         <h2>Admin View</h2>
         <a href="dashboard.php">Statistics</a>
-        <a href="manageusers.php" onclick="gotoUsersManage()">Manage Users</a>
+        <a href="manageusers.php" onclick="gotoUsersManage()">Register Users</a>
         <a href="">Reports</a>
         <a href="">Lendet</a>
+        <a href="userlista.php">Users List</a>
         <a href="ushtrimeadmin.php">Materiali</a>
         <a href="">Settings</a>
         <a href="" onclick="boLogout()">Logout</a>
