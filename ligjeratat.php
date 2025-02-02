@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php'; 
+include 'LidhjaDatabaza/databaza.php'; 
 
 
 if (isset($_GET['lenda_id'])) {
@@ -44,7 +44,7 @@ $conn->close();
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="ligjeratat.php">Ligjeratat</a></li>
+                <li><a href="index.html">Ballina</a></li>
             </ul>
             </div>
     <h1>Ligjeratat</h1>
@@ -78,8 +78,7 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    right: 0;
-    border-bottom: 1.6px solid black;
+    right:40;
     top: 0;
     height: 75px;
     width:100%;
@@ -88,22 +87,13 @@ body {
     flex-wrap: wrap;
     position: fixed;
   }
-  .back-button {
-    position: fixed;
-    top: 90px;
-    left: 0px;
-    padding: 10px 20px;
-    background-color: #d98c11;
+ .priv-navname h2 {
     color: white;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    font-size: 1.8em;
 }
 
-.back-button:hover {
-    background-color: orange;
+ .priv-navname h2 span {
+    color: orange;
 }
 .priv-navbar ul {
     display: flex;
@@ -157,8 +147,7 @@ h1 {
 }
 
 .ligjerata {
-    background: linear-gradient(135deg, #d98c11)
-    border-radius: 8px;
+    background: linear-gradient(135deg, #d98c11);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px auto;
@@ -190,7 +179,20 @@ h1 {
 .ligjerata p small {
     font-size: 0.9em;
 }
+a.back-button {
+    color: white;
+    padding:10px 20px;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    text-decoration: none;
+    z-index: 10;
+}
 
+a.back-button:hover {
+    color: #f7b851;
+}
 
 .no-results {
     text-align: center;

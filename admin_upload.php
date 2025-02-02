@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php';
+include 'LidhjaDatabaza/databaza.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lenda_id = $_POST['lenda_id'];
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Të gjitha fushat janë të detyrueshme.");
     }
 
-    $upload_dir = "uploads/";
+    $upload_dir = "postlendet/";
     $file_path = $upload_dir . basename($file["name"]);
 
     if (move_uploaded_file($file["tmp_name"], $file_path)) {
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Ngarko Ligjerata</title>
 </head>
 <body>
-<a href="javascript:history.back()" class="back-button">Shko Mbrapa</a>
+<a href="javascript:history.back()" class="back-button">←</a>
 <header>
         <div class="priv-navbar">
             <div class="priv-navname">
@@ -87,9 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 .back-button {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
+    top: 0px;
+    left: 0px;
+    padding: 10px 30px;
     background-color: #d98c11;
     color: white;
     font-size: 1.2em;
@@ -104,31 +104,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 .priv-navbar {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
+    position fixed
     left: 0;
+    right 0;
     border-bottom: 1.6px solid black;
     top: 0;
     height: 75px;
     width: auto;
     padding: 8px 16px;
     background-color: rgb(34,34,34);
-    flex-wrap: wrap;
-}
-
-.fixed {
-    background-color: rgb(34,34,34);
-    top: 0px;
-    right: 0;
-    left: 0;
-    position: fixed;
-    z-index: 100;
-}
-
-header .priv-navname {
-    flex: 1;
-    display: flex;
-    align-items: center;
+    z-index: 1000;
 }
 
 header .priv-navbar h2 {
@@ -227,33 +214,5 @@ form button:hover {
     background-color: #ff9900; 
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: black;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    text-shadow: -1px 1px white, 1px 1px white, 1px -1px white, -1px -1px white;
-}
-
-.footer-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.9em;
-}
-
-.footer-bottom a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}
 
 </style>

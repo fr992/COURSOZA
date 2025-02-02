@@ -1,3 +1,7 @@
+<?php 
+    //....
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>COURSOZA</title> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="aboutus.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="stilizimi/style.css">
+    <link rel="stylesheet" href="stilizimi/aboutus.css">
+    <link rel="stylesheet" href="stilizimi/footer.css">
+    <link rel="stylesheet" href="stilizimi/slider.css">
 </head>
 <body>
     <header>
@@ -17,12 +21,13 @@
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="lendet.html">Lendet</a></li>
+                <li><a href="lendet.php">Lendet</a></li>
                 <li><a href="ushtrimet.html">Ushtrimet</a></li>
                 <li><a href="njoftimet.html">Njoftime</a></li>
+                <li><a href="kuizindex.html">Kuizet</a></li>
             </ul>
             <div class="priv-signin">
-                <a href="login.php"><i class="login-logo fas fa-right-to-bracket" aria-label="Login"></i></a>
+                <a href="admin/login.php"><i class="login-logo fas fa-right-to-bracket" aria-label="Login"></i></a>
             </div>
         </div>
     </header>
@@ -72,19 +77,19 @@
     
         <div class="team-section">
             <div class="team-member">
-                <img src="/fotot/" alt="Crew Member 1">
+                <img src="/fotot/cr7.jpg" alt="Crew Member 1">
                 <h4>Floridon Rama</h4>
-                <p>CEO</p>
+                <p>CEO & Founder</p>
             </div>
             <div class="team-member">
-                <img src="/fotot/" alt="Crew Member 2">
+                <img src="/fotot/cllevio.jpg" alt="Crew Member 2">
                 <h4>Lorent Tahiri</h4>
-                <p>CEO</p>
+                <p>Lead Developer</p>
             </div>
             <div class="team-member">
-                <img src="/fotot/" alt="Crew Member 3">
+                <img src="/fotot/kozi.jpg" alt="Crew Member 3">
                 <h4>Edison Gegaj</h4>
-                <p>CEO</p>
+                <p>Chief Marketing Officer</p>
             </div>
         </div>
     </div>
@@ -94,42 +99,42 @@
         <div class="slider-container">
             <div class="slider">
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 1">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 1">
                     <h3>Feature 1</h3>
                     <p>Materialism</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 2">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 2">
                     <h3>Feature 2</h3>
                     <p>Description of feature 2.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 3">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 3">
                     <h3>Feature 3</h3>
                     <p>Description of feature 3.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 4">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 4">
                     <h3>Feature 4</h3>
                     <p>Description of feature 4.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 5">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 5">
                     <h3>Feature 5</h3>
                     <p>Description of feature 5.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 6">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 6">
                     <h3>Feature 6</h3>
                     <p>Description of feature 6.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 7">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 7">
                     <h3>Feature 7</h3>
                     <p>Description of feature 7.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/" alt="Feature 8">
+                    <img src="/fotot/cllevio.jpg" alt="Feature 8">
                     <h3>Feature 8</h3>
                     <p>Description of feature 8.</p>
                 </div>
@@ -163,11 +168,11 @@
             <div class="footer-section">
                 <h5>Quick Links</h5>
                 <ul class="linkat-footer">
-                    <li><a href="#">w3.schools</a></li>
-                    <li><a href="#">freecodecamp.org</a></li>
-                    <li><a href="#">uiverse.io</a></li>
-                    <li><a href="#">algorithms.st</a></li>
-                    <li><a href="#">cse-course.net</a></li>
+                    <li><a href="https://www.w3schools.com/">w3.schools</a></li>
+                    <li><a href="https://www.freecodecamp.org/">freecodecamp.org</a></li>
+                    <li><a href="https://uiverse.io/">uiverse.io</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/data-structures/">Data Structures</a></li>
+                    <li><a href="https://www.gu.se/en/computer-science-engineering">University of Gothenburg</a></li>
                 </ul>
             </div>
             <div class="footer-section">

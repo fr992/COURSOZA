@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "database.php";
+include ('../LidhjaDatabaza/database.php');
 
 // i rujm do raste si variabla qe me mujt me bo ekzekutim me JS alert nese ka ndonje error
 $loginError = false;
@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         header("Location: dashboard.php");
                         exit; // si return ne java
                     } else {
-                        header("Location: index.html");
+                        header("Location: ../index.php");
                         exit;
                     }
                 } else {
@@ -57,16 +57,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $dob = filter_input(INPUT_POST, "dob", FILTER_SANITIZE_SPECIAL_CHARS);
 
         // validimi ne back
-
+        $rolii = 'ROLE_USER';
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo "Invalid email format. Please provide a valid email address.";
         } else if (!empty($username) && !empty($dob) && !empty($password)) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $conn->prepare("INSERT INTO users (username, email, dob, password, role) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss", $username, $email, $dob, $hashed_password, 'ROLE_USER');
+            $stmt->bind_param("sssss", $username, $email, $dob, $hashed_password, $rolii);
             if ($stmt->execute()) {
                 echo "Registration successful.";
-                header("Location: index.html");
+                header("Location: ../index.php");
                 exit();
             } else {
                 echo "Error: Registration failed.";
