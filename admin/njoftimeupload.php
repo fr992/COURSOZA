@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     $stmt->bind_param("sss",$titulli,$short_text,$full_text);
 
     if($stmt->execute()) {
-        echo "Njoftimi u publikua me sukses.!";
+       $publishSuccess = true;
     }
     else {
         echo "Gabim gjat publikimit te njoftimeve:" . $conn->error;
@@ -116,6 +116,17 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             left: 0;
             position: fixed;
         }
+        .success-message {
+            background-color:lightgreen;
+            padding:15px;
+            border-radius: 4px;
+            text-align: center;
+            color: green;
+            font-size: 18px;
+            margin-bottom:20px;
+            display: none;
+        }
+       
 
 
     </style>
@@ -123,6 +134,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 <body>
     <div class="container">
         <h1>Posto Njoftimin</h1>
+       
         <form method="POST" action="">
         <label for="titulli">Postuesi</label>
         <input type="text"  id="titulli" name="titulli" required placeholder="Shkruani emrin tuaj ">
@@ -140,6 +152,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     <div class="footer">
     <p>Copyright <a href="#">© WWW.COURSOZA.</a> All Rights Reserved</p>
 </footer>
+
     
 </body>
 </html>
