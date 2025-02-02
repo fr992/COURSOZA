@@ -173,7 +173,6 @@
         <a href="">Reports</a>
         <a href="admin_upload.php">Lendet</a>
         <a href="">Njoftimet</a>
-        <a href="">Lendet</a>
         <a href="userlista.php">Users List</a>
         <a href="ushtrimeadmin.php">Materiali</a>
         <a href="adminmessages.php">Admin - Messages</a>
