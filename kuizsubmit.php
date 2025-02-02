@@ -1,5 +1,5 @@
 <?php
-require 'kuizdatabase.php';
+require 'LidhjaDatabaza/kuizdatabase.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $answers = $_POST;

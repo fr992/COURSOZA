@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
-*{
+* {
     margin: 0;
 }
+
 body {
     line-height: 1.2;
     font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-
 }
 
 .login-logo {
-    margin-right: 4%;
+    margin-right: 10%;
     color: white;
-    font-size: 2.2rem;
+    font-size: 2.16rem;
     cursor: pointer;
-    transition: transform 0.5s;
+    transition: transform 2s;
 }
 
 .login-logo:hover {
@@ -30,29 +29,20 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    left: 0;
     border-bottom: 1.6px solid black;
-    top: 0;
-    height: 75px;
-    width: auto;
+    height: 72px;
     padding: 8px 16px;
-    background-color: rgb(34,34,34);
+    background-color: rgb(34, 34, 34);
     flex-wrap: wrap;
 }
 
 .fixed {
-    background-color: rgb(34,34,34);
-    top: 0px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(34, 34, 34);
     right: 0;
     left: 0;
-    position: fixed;
     z-index: 100;
-}
-
-header .priv-navname {
-    flex: 1;
-    display: flex;
-    align-items: center;
 }
 
 header .priv-navbar h2 {
@@ -62,22 +52,20 @@ header .priv-navbar h2 {
 
 .priv-navbar ul {
     display: flex;
-    flex: 4;
     list-style: none;
     padding: 0;
     margin: 0;
     gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
-} 
+}
 
 .priv-navbar ul li a {
     padding: 8px 16px;
     text-decoration: none;
     color: white;
-    font-size: 0.95em;
+    font-size: 0.96em;
     position: relative;
-    overflow: hidden;
     transition: color 0.3s ease-in-out;
 }
 
@@ -86,7 +74,7 @@ header .priv-navbar h2 {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 1.6px; 
+    height: 1.6px;
     width: 100%;
     background-color: white;
     transform: scaleX(0);
@@ -94,12 +82,12 @@ header .priv-navbar h2 {
     transform-origin: left;
 }
 
-.priv-navbar ul li a:hover{
-    color: #f7b851;
+.priv-navbar ul li a:hover {
+    color: #F7B851;
 }
 
-.priv-navbar ul li a:hover::before{
-    transform: scale(1.05);
+.priv-navbar ul li a:hover::before {
+    transform: scaleX(1);
 }
 
 .priv-navbar .priv-signin {
@@ -107,13 +95,14 @@ header .priv-navbar h2 {
     display: flex;
     justify-content: flex-end;
 }
+
 .priv-signin i {
     color: white;
 }
 
-.main-page{
+.main-page {
+    background: linear-gradient(to top, #d98c11, #F7B851);
     height: 80vh;
-    background: linear-gradient(135deg, #d98c11, #F7B851);
     background-size: cover;
     color: black;
     display: flex;
@@ -122,14 +111,13 @@ header .priv-navbar h2 {
     align-items: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
     padding: 16px;
 }
 
 .main-page .heading {
     position: absolute;
-    top: 5.6%;
     margin: 16px;
+    top: 5.6%;
     letter-spacing: 1.2px;
     font-size: 2rem;
     text-align: center;
@@ -176,50 +164,11 @@ header .priv-navbar h2 {
     font-size: 1.2rem;
 }
 
-
-@media (max-width:480px){
-    .priv-navbar ul {
-        gap: 8px;
-    }
-    
-    .priv-navbar ul li a {
-        font-size: 0.8em;
-        padding: 4px 8px;
-    }
-    
-    .main-page {
-        padding: 8px;
-    }
-    
-    .main-page .heading {
-        font-size: 1.2rem;
-        top: 8%;
-    }
-    
-    .awards-box {
-        width: 80%;
-        height: auto;
-        padding: 12px;
-    }
-    
-    .awards-box i {
-        font-size: 2rem;
-    }
-    
-    .awards-box h3 {
-        font-size: 0.96rem;
-    }
-    
-    .awards-box p {
-        font-size: 0.8rem;
-    }
-}
-
 @media (max-width: 768px) {
     .main-page .heading {
         font-size: 1.6rem;
         top: 4%;
-     }
+    }
     .awards-box {
         width: 176px;
         height: 160px;
@@ -234,9 +183,48 @@ header .priv-navbar h2 {
     }
 }
 
+@media (max-width: 480px) {
+    .priv-navbar ul {
+        gap: 8px;
+    }
+
+    .priv-navbar ul li a {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+
+    .main-page {
+        padding: 8px;
+    }
+
+    .main-page .heading {
+        font-size: 1.2rem;
+        top: 8%;
+    }
+
+    .awards-box {
+        width: 80%;
+        height: auto;
+        padding: 12px;
+    }
+
+    .awards-box i {
+        font-size: 2rem;
+    }
+
+    .awards-box h3 {
+        font-size: 0.96rem;
+    }
+
+    .awards-box p {
+        font-size: 0.8rem;
+    }
+}
+
 @media (min-width: 1200px) {
     .priv-navbar {
         padding: 12px 40px;
+        padding-left: 50px;
     }
 
     .priv-navbar ul {
@@ -279,4 +267,3 @@ header .priv-navbar h2 {
         font-size: 1.44rem;
     }
 }
-/* Reduced by 20% te qdo madhsi pershkak te zoomit ne gogole */ 

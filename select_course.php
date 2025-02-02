@@ -1,5 +1,5 @@
 <?php
-include 'databaza.php'; 
+include 'LidhjaDatabaza/databaza.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,17 @@ include 'databaza.php';
     <title>Zgjidh Ligjeraten</title>
 </head>
 <body>
+<header>
 <a href="javascript:history.back()" class="back-button">←</a>
+        <div class="priv-navbar">
+            <div class="priv-navname">
+                <h2>COURS<span style="color: orange;">OZA</span></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="lendet.php">Lendet</a></li>
+            </ul>
+        </div>
+    </header>
     <h1>Zgjidh Ligjeraten</h1>
     <form action="ligjeratat.php" method="GET"> 
         <label for="lenda_id">Lendet:</label>
@@ -27,7 +37,7 @@ include 'databaza.php';
         <button type="submit">Shiko Ligjeraten</button>
     </form>
     <style>
-        body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -39,22 +49,66 @@ include 'databaza.php';
     background: linear-gradient(135deg, #d98c11, #F7B851);
     background-size: 300% 300%;
 }
-.back-button {
+.priv-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    padding: 10px 30px;
-    background-color: #d98c11;
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    top:0;
+    left: 0;
+    right 0;
+    height: 75px;
+    width: auto;
+    padding: 10px 683px;
+    background-color: rgb(34,34,34);
+    z-index: 1000;
 }
 
-.back-button:hover {
-    background-color: orange;
+header .priv-navbar h2 {
+    color: white;
+    font-size: 1.6em;
+}
+
+.priv-navbar ul {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+.priv-navbar ul li a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.95em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.priv-navbar ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.6px; 
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.priv-navbar ul li a:hover{
+    color: #f7b851;
+}
+
+.priv-navbar ul li a:hover::before{
+    transform: scale(1.05);
 }
 h1 {
     text-align: center;
@@ -112,6 +166,20 @@ form button {
 
 form button:hover {
     background-color: #ff9900; 
+}
+a.back-button {
+    color: white;
+    padding:10px 20px;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    text-decoration: none;
+    z-index: 10;
+}
+
+a.back-button:hover {
+    color: #f7b851;
 }
     </style>
 </body>

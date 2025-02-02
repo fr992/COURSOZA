@@ -1,6 +1,6 @@
 <?php
 
-include 'dbe.php';
+include 'LidhjaDatabaza/dbe.php';
 
 $sql = "SELECT titulli, short_text, full_text, koha_publikimit FROM njoftimet ORDER BY id DESC";
 $result = $conn->query($sql);
@@ -13,7 +13,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Njoftimet</title>
-    <link rel="stylesheet" href="njoftimet.css">
+    <link rel="stylesheet" href="stilizimi/njoftimet.css">
 </head>
 <body>
     <header>

@@ -1,6 +1,6 @@
 <?php
 
-include 'dbe.php';
+include '../LidhjaDatabaza/dbe.php';
 
 if($_SERVER["REQUEST_METHOD"]==="POST"){
     $titulli = $_POST["titulli"];
@@ -47,7 +47,11 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
         }
         .container {
+<<<<<<< HEAD:njoftimeupload.php
             max-width: 1000px;
+=======
+            max-width: 800;
+>>>>>>> 81f76f7daf03d344727ebe45874d594012b18e10:admin/njoftimeupload.php
             margin: 40px auto;
             background-color: white;
             padding: 30px;
@@ -60,7 +64,11 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             text-align: center;
             color: orange;
             font-size: 2em;
+<<<<<<< HEAD:njoftimeupload.php
             margin-bottom: 30px;
+=======
+            margin-bottom: 30px
+>>>>>>> 81f76f7daf03d344727ebe45874d594012b18e10:admin/njoftimeupload.php
         }
         form {
             display: flex;

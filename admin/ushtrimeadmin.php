@@ -1,75 +1,80 @@
-<?php 
-include 'ushtrimetdb.php';
+<?php
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+include '../LidhjaDatabaza/ushtrimedb.php'; // lidhja db
+// postimi i file edhe validimi
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_FILES['file'], $_POST['title'], $_POST['text'], $_POST['subject'])) {
         $title = $_POST['title'];
         $text = $_POST['text'];
-        $subject = $_POST['subject']; // e merr landen per form
+        $subject = $_POST['subject']; // me marr landen prej formes
 
+        // validimi i llojit edhe madhesis
         $allowedTypes = [
             'application/pdf',
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // .docx
             'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', // .xlsx
             'application/msword', // .doc
             'text/plain', // .txt
-            'application/vnd.ms-excel', // .xls 
-            'image/jpeg', // .jpg fotot
-            'image/png', // .png fotot
+            'application/vnd.ms-excel', // .xls
+            'image/jpeg', // .jpg
+            'image/png', // .png
         ];
 
         $fileType = mime_content_type($_FILES['file']['tmp_name']);
-        if (in_array($fileType, $allowedTypes)) {
+        if (!in_array($fileType, $allowedTypes)) {
             die("Invalid file type. Allowed types: PDF, Word, Excel, Text, Images.");
         }
 
-        $maxSize = 10 * 1024 * 1024; //10MB
-        if($_FILES['file']['size'] > $maxSize) {
-            die("File size is too large. Maximum size is 10MB.");
+        $maxSize = 10 * 1024 * 1024; // 10MB
+        if ($_FILES['file']['size'] > $maxSize) {
+            die("File is too large. Max size: 10MB.");
         }
 
-        $fileName = uniqid() . '-' . basename($_FILES['file']['name']);
-        $target_dir = "assets/uploads/";
+        // gjenerimi i parashtesave te file qe mos me pas ndeshje
+        $fileName = uniqid() . '-' . basename($_FILES["file"]["name"]);
+        $target_dir = "assets/uploads/"; 
 
-        // a ekziston folderi, nese jo krijoje
-        if(!is_dir($target_dir)){
-            if(!mkdir($target_dir, 0777, true)) {
+        if (!is_dir($target_dir)) {
+            if (!mkdir($target_dir, 0777, true)) {
                 die("Failed to create upload directory.");
             }
         }
 
         $target_file = $target_dir . $fileName;
 
-        if(!move_uploaded_file($_FILES["file"]['tmp_name'], $target_file)){
+        if (!move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
             die("Failed to upload file.");
         }
 
-        // insertimi ne databaze
-
+        // Insert into the database
         $stmt = $pdo->prepare("INSERT INTO content (title, text, file_path, subject) VALUES (?, ?, ?, ?)");
         $stmt->execute([$title, $text, $target_file, $subject]);
 
-        // kthe nfaqen e njejt qe me parandalu publikim te dyfisht
-        header('Location: ushtrimeadmin.php');
+        // Redirect to the same page qe mos me u bo submit nrefresh ose dy her
+        header("Location: ushtrimeadmin.php");
         exit();
     }
-} else if (isset($_GET['delete'])) {
+} elseif (isset($_GET['delete'])) {
+    // me fshi postin
     $id = $_GET['delete'];
     $stmt = $pdo->prepare("SELECT file_path FROM content WHERE id = ?");
     $stmt->execute([$id]);
     $content = $stmt->fetch();
 
-    if($content && file_exists($content['file_path'])) {
-        unlink($content['file_path']); // e fshin file prej serveri
+    if ($content && file_exists($content['file_path'])) {
+        unlink($content['file_path']); // fshirja prej serveri
     }
 
     $stmt = $pdo->prepare("DELETE FROM content WHERE id = ?");
     $stmt->execute([$id]);
 
-    header("Location: ushtrimeadmin.php"); // redirect pas fshirjes 
+    header("Location: ushtrimeadmin.php"); // dergesa pas fshirjes
     exit();
-} else if (isset($_GET['edit'])) {
-    // marrja e content per perditsim
+} elseif (isset($_GET['edit'])) {
+    // marrja e te dhenave per edit
     $id = $_GET['edit'];
     $stmt = $pdo->prepare("SELECT * FROM content WHERE id = ?");
     $stmt->execute([$id]);
@@ -174,28 +179,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
-    <header>
-        <a href="dashboard.php" class="back-btn1">Back</a>
-        <h1>Admin Content Management</h1>
-    </header>
 
-    <div class="container">
-    <!-- admin content form -->
-
+<header>
+    <a href="dashboard.php" class="back-btn1">Back</a>
+    <h1>Admin Content Management</h1>
+</header>
+<div class="container">
+    <!-- Admin Content Form --->
     <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <input type="text" name="title" value="<?= htmlspecialchars($content['title'] ?? '') ?>" placeholder="Title" required><br>
         </div>
         <div class="form-group">
-            <textarea name="text" placeholder="Description"><?= htmlspecialchars($content['text'] ?? '') ?></textarea><br>
+            <textarea name="text" placeholder="Text" required><?= htmlspecialchars($content['text'] ?? '') ?></textarea><br>
         </div>
         <div class="form-group">
             <input type="file" name="file" accept=".pdf,.docx,.doc,.xlsx,.xls,.txt,.jpeg,.jpg,.png" required><br>
         </div>
-
         <div class="form-group">
             <select name="subject" required>
-            <option value="">Select Subject</option>
+                <option value="">Select Subject</option>
                 <option value="Matematik 1">Matematik 1</option>
                 <option value="SHKI0">Hyrje ne Programim</option>
                 <option value="BIEE">BIEE</option>
@@ -216,33 +219,33 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <option value="Rrjeta">Rrjeta Kompjuterike dhe Komunikimi</option>
                 <option value="Algoritme">Hyrje ne Algoritme</option>
                 <option value="Web">Dizajni dhe Zhvillimi i Web</option>
-                 
-                    <!-- shton sa dush land -->
+                
+                <!-- lendet tjera...-->
             </select>
         </div>
         <button type="submit">Submit</button>
     </form>
 
-    <h2>Content Posted</h2>
+    <h2>Existing Content</h2>
 
-    <?php 
+    <?php
     $stmt = $pdo->query("SELECT * FROM content");
-
     while ($row = $stmt->fetch()) {
         echo "<div class='content-item'>";
         echo "<h3>" . htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8') . "</h3>";
-        echo "<p>" . htmlspecialchars($row['text'], ENT_QUOTES, 'UTF-8') . "</p>";
+        echo "<p>" . nl2br(htmlspecialchars($row['text'], ENT_QUOTES, 'UTF-8')) . "</p>";
         $filePath = $row['file_path'];
-        if(file_exists($filePath)){
+        if (file_exists($filePath)) {
             echo "<a href='" . htmlspecialchars($filePath, ENT_QUOTES, 'UTF-8') . "'>Download File</a><br>";
         } else {
-            echo "<p>File not found.</p>"
+            echo "<p>File not found.</p>";
         }
-        echo "<a href='?edit=" . $row['id'] . "'>Edit</a> | "; 
+        echo "<a href='?edit=" . $row['id'] . "'>Edit</a> | ";
         echo "<a href='?delete=" . $row['id'] . "'>Delete</a>";
         echo "</div>";
-    } 
+    }
     ?>
-    </div>
+</div>
+
 </body>
 </html>
