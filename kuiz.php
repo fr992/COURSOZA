@@ -43,7 +43,7 @@ if(!$questions){
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-link">
-                <li style="padding-right: 30rem"><a href="index.html">Ballina</a></li>
+                <li style="padding-right: 30rem"><a href="index.php">Ballina</a></li>
             </ul>
         </div>
     </header>

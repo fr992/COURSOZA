@@ -27,7 +27,7 @@ body {
 }
 
 header .priv-navname {
-    flex: 1;
+    margin-right: 50px;
     display: flex;
     align-items: center;
 }

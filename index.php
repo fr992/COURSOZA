@@ -85,12 +85,12 @@
             <div class="team-member">
                 <img src="fotot/lorent.jpg" alt="Crew Member 2">
                 <h4>Lorent Tahiri</h4>
-                <p>Lead Developer</p>
+                <p>CEO & Founder</p>
             </div>
             <div class="team-member">
                 <img src="fotot/edison.jpg" alt="Crew Member 3">
                 <h4>Edison Gegaj</h4>
-                <p>Chief Marketing Officer</p>
+                <p>CEO & Founder</p>
             </div>
         </div>
     </div>
@@ -100,44 +100,44 @@
         <div class="slider-container">
             <div class="slider">
                 <div class="box">
-                    <img src="fotot/algoritme.jpg" alt="Feature 1">
-                    <h3>Feature 1</h3>
-                    <p>Materialism</p>
+                    <img src="fotot/hena.jpg" alt="Feature 1">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/ce.jpg" alt="Feature 2">
-                    <h3>Feature 2</h3>
-                    <p>Description of feature 2.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 2">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/cs.jpg" alt="Feature 3">
-                    <h3>Feature 3</h3>
-                    <p>Description of feature 3.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 3">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/csee.jpg" alt="Feature 4">
-                    <h3>Feature 4</h3>
-                    <p>Description of feature 4.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 4">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/css.jpg" alt="Feature 5">
-                    <h3>Feature 5</h3>
-                    <p>Description of feature 5.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 5">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/physic.jpg" alt="Feature 6">
-                    <h3>Feature 6</h3>
-                    <p>Description of feature 6.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 6">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/math.jpg" alt="Feature 7">
-                    <h3>Feature 7</h3>
-                    <p>Description of feature 7.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 7">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div class="box">
-                    <img src="fotot/baz.jpg" alt="Feature 8">
-                    <h3>Feature 8</h3>
-                    <p>Description of feature 8.</p>
+                    <img src="fotot/hena.jpg" alt="Feature 8">
+                    <h3>Lorem</h3>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
                 <h5>Coursoza</h5>
                 <div class="contact-info">
                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="icon">🏠</span>No. 77 LA, US</a></li>
+                        <li><a href="#"><span class="icon">🏠</span>No. 99 LA, US</a></li>
                         <li><a href="#"><span class="icon">📞</span>+1 333 666 999</a></li>
                         <li><a href="#"><span class="icon">✉️</span>coursoza@school.net</a></li>
                     </ul>
@@ -163,7 +163,7 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Terms & Conditions</a></li>
                     <li><a href="#">Learn More</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contactform.php">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section">

@@ -1,5 +1,6 @@
  body{
-  line-height: 1.2;
+    margin: 0;
+    line-height: 1.2;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
   }
@@ -16,8 +17,9 @@
   
 
   .priv-navname {
-    position: absolute;
+    display: flex;
     left: 20px;
+    font-size: 1.35em;
   }
 
   .priv-navbar h2 {
@@ -122,11 +124,14 @@
     color: #000000;
     
   }
-  
-  footer{
+
+  footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-  }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

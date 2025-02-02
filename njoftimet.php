@@ -49,7 +49,7 @@ $result = $conn->query($sql);
     <?php endif; ?>   
     </section>
     <footer>
-    <p>Copyright <a href="#">© WWW.COURSOZA.</a> All Rights Reserved</p>
+    <p>Copyright <a href="#" style="color: white; text-decoration: none;">© WWW.COURSOZA |</a> All Rights Reserved</p>
     </footer>
     <script src="njoftime.js"></script>
 </body>

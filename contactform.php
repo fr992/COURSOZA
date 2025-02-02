@@ -16,10 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindParam(':time', $time);
 
     if ($stmt->execute()) {
-        echo "<p style='color: green;'>Message sent successfully!</p>";
+        echo "<script>alert('Mesazhi u dergua me sukses!');</script>";
     } else {
-        echo "<p style='color: red;'>Error: Could not send message.</p>";
+        echo "<script>alert('Gabim gjate dergimit!');</script>";
     }
+
 }
 ?>
 
@@ -30,6 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: orange;
+            margin: 0;
+            padding-top: 60px; 
+            padding-bottom: 40px; 
+        }
+
         .priv-navbar {
             display: flex;
             justify-content: start;
@@ -104,18 +113,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: white;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding-top: 60px; 
-            padding-bottom: 40px; 
-        }
-
         h1 {
             text-align: center;
             padding: 20px;
-            background-color: orange;
+            background-color: black;
+            border-radius: 8px;
             color: white;
         }
 
@@ -159,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .contact-form-container input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: darkblue;
         }
 
         footer {
@@ -183,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="lendet.php">Lendet</a></li>
+                <li><a href="ligjeratat.php">Lendet</a></li>
                 <li><a href="ushtrimet.php">Ushtrimet</a></li>
                 <li><a href="njoftimet.php">Njoftime</a></li>
                 <li><a href="kuizindex.php">Kuizet</a></li>
