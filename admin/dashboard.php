@@ -48,6 +48,7 @@
         }
 
         .sidebar a{
+            text-align: start;
             color: white;
             text-decoration: none;
             padding: 10px 15px;
@@ -133,6 +134,7 @@
         }
         @media (max-width: 576px) {
             .sidebar {
+                align-items: center;
                 position: static;
                 width: 100%;
                 height: auto;
@@ -168,11 +170,16 @@
         <h2>Admin View</h2>
         <a href="dashboard.php">Statistics</a>
         <a href="manageusers.php" onclick="gotoUsersManage()">Register Users</a>
+<<<<<<< HEAD
         <a href="">Reports</a>
         <a href="admin_upload.php">Lendet</a>
+=======
+        <a href="">Njoftimet</a>
+        <a href="">Lendet</a>
+>>>>>>> 4752d42bac6d3f654810e0559420fb83b7ca858b
         <a href="userlista.php">Users List</a>
         <a href="ushtrimeadmin.php">Materiali</a>
-        <a href="">Settings</a>
+        <a href="adminmessages.php">Admin - Messages</a>
         <a href="" onclick="boLogout()">Logout</a>
     </div>
 

@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Gabim: " . $stmt->error;
         }
 
+
         $stmt->close();
     } else {
         echo "Ngarkimi i folderit deshtoi";
@@ -107,9 +108,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position fixed
+    position: fixed;
     left: 0;
-    right 0;
+    right: 0;
     border-bottom: 1.6px solid black;
     top: 0;
     height: 75px;
