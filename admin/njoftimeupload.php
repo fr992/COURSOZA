@@ -47,19 +47,9 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
         }
         .container {
-<<<<<<< HEAD
+
             max-width: 800;
-=======
-<<<<<<< HEAD:njoftimeupload.php
-            max-width: 1000px;
-=======
-<<<<<<< HEAD:njoftimeupload.php
-            max-width: 1000px;
-=======
-            max-width: 800;
->>>>>>> 81f76f7daf03d344727ebe45874d594012b18e10:admin/njoftimeupload.php
->>>>>>> b33d903e7a08d21bfdbbfa52b4814f196224b1d2:admin/njoftimeupload.php
->>>>>>> 150463df46077139b5f13fc9f662b8ae6d8f8bab
+
             margin: 40px auto;
             background-color: white;
             padding: 30px;
@@ -72,19 +62,8 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             text-align: center;
             color: orange;
             font-size: 2em;
-<<<<<<< HEAD
-            margin-bottom: 30px
-=======
-<<<<<<< HEAD:njoftimeupload.php
+
             margin-bottom: 30px;
-=======
-<<<<<<< HEAD:njoftimeupload.php
-            margin-bottom: 30px;
-=======
-            margin-bottom: 30px
->>>>>>> 81f76f7daf03d344727ebe45874d594012b18e10:admin/njoftimeupload.php
->>>>>>> b33d903e7a08d21bfdbbfa52b4814f196224b1d2:admin/njoftimeupload.php
->>>>>>> 150463df46077139b5f13fc9f662b8ae6d8f8bab
         }
         
         form {
