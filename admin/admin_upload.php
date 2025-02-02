@@ -1,5 +1,5 @@
 <?php
-include 'LidhjaDatabaza/databaza.php';
+include '../LidhjaDatabaza/databaza.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lenda_id = $_POST['lenda_id'];
@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file_path = $upload_dir . basename($file["name"]);
 
     if (move_uploaded_file($file["tmp_name"], $file_path)) {
-        $stmt = $conn->prepare("INSERT INTO ligjeratat (lenda_id, titulli, file_path, admin_id) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("issi", $lenda_id, $titulli, $file_path, $admin_id);  // Këtu është shtuar admin_id
+        $stmt = $conn->prepare("INSERT INTO ligjeratat (lenda_id, titulli, file_path) VALUES (?, ?, ?)");
+        $stmt->bind_param("issi", $lenda_id, $titulli, $file_path);  // Këtu është shtuar admin_id
 
         if ($stmt->execute()) {
             echo "Ligjerata eshte shtuar me sukses!";
@@ -42,16 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Ngarko Ligjerata</title>
 </head>
 <body>
-<a href="javascript:history.back()" class="back-button">←</a>
-<header>
-        <div class="priv-navbar">
-            <div class="priv-navname">
-                <h2>COURS<span style="color: orange;">OZA</span></h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="lendet.php">Lendet</a></li>
-            </ul>
-        </div>
+    <header>
+        <a href="dashboard.php" class="back-btn1">Back</a>
+        <h1>Users Management System</h1>
     </header>
     <form action="admin_upload.php" method="POST" enctype="multipart/form-data">
         <label for="lenda_id">Zgjidh Lenden:</label>
@@ -75,128 +68,79 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 </html>
 <style>
-    body {
-    margin: 0;
-    padding: 0;
+
+body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #d98c11, #F7B851);
-    background-size: 300% 300%;
-}
-.back-button {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    padding: 10px 30px;
-    background-color: #d98c11;
-    color: white;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: orange;
-}
-.priv-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    border-bottom: 1.6px solid black;
-    top: 0;
-    height: 75px;
-    width: auto;
-    padding: 8px 16px;
-    background-color: rgb(34,34,34);
-    z-index: 1000;
-}
-
-header .priv-navbar h2 {
-    color: white;
-    font-size: 1.6em;
-}
-
-.priv-navbar ul {
-    display: flex;
-    flex: 4;
-    list-style: none;
-    padding: 0;
+    background-color: #f8f9fa;
     margin: 0;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-} 
-
-.priv-navbar ul li a {
-    padding: 8px 16px;
-    text-decoration: none;
+    padding: 0;
+}
+header {
+    background-color: #343a40;
     color: white;
-    font-size: 0.95em;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease-in-out;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;  
+    padding: 20px 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    margin: 0;
+    font-size: 24px; 
+    text-align: center;
+    flex-grow: 1; 
+    color: white;
 }
 
-.priv-navbar ul li a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1.6px; 
-    width: 100%;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-    transform-origin: left;
+header .back-btn1{
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.priv-navbar ul li a:hover{
-    color: #f7b851;
-}
-
-.priv-navbar ul li a:hover::before{
+header .back-btn1:hover{
+    color: white;
     transform: scale(1.05);
 }
+
 form {
     background-color: white;
     margin: 40px auto;
     padding: 30px;
-    width: 60%;
-    max-width: 500px; 
+    width: 90%;
+    max-width: 500px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 form label {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 10px;
     display: block;
+    font-weight: 600;
 }
 
-form input, form select {
-    font-size: 1.1em;
-    padding: 12px;
-    margin: 15px 0;
+form input, 
+form select, 
+form textarea {
+    font-size: 1em;
+    padding: 12px 0;
+    margin: 10px 0;
     width: 100%;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-form input:focus, form select:focus {
+form input:focus, 
+form select:focus, 
+form textarea:focus {
     border-color: #ff9900;
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
     outline: none;
 }
 
@@ -206,15 +150,35 @@ form button {
     border: none;
     background-color: #333;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     margin-top: 15px;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-    background-color: #ff9900; 
+    background-color: #ff9900;
+    transform: scale(1.05);
 }
 
+@media (max-width: 600px) {
+    form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    form input, 
+    form select, 
+    form textarea {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
 
 </style>
