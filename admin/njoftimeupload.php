@@ -47,11 +47,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
         }
         .container {
-<<<<<<< HEAD:njoftimeupload.php
-            max-width: 1000px;
-=======
             max-width: 800;
->>>>>>> 81f76f7daf03d344727ebe45874d594012b18e10:admin/njoftimeupload.php
             margin: 40px auto;
             background-color: white;
             padding: 30px;
@@ -64,12 +60,9 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             text-align: center;
             color: orange;
             font-size: 2em;
-<<<<<<< HEAD:njoftimeupload.php
-            margin-bottom: 30px;
-=======
             margin-bottom: 30px
->>>>>>> 81f76f7daf03d344727ebe45874d594012b18e10:admin/njoftimeupload.php
         }
+        
         form {
             display: flex;
             flex-direction: column;    
@@ -128,8 +121,8 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     <div class="container">
         <h1>Posto Njoftimin</h1>
         <form method="POST" action="">
-        <label for="titulli">Titulli</label>
-        <input type="text"  id="titulli" name="titulli" required placeholder="Shkruani titullin e njoftimit ">
+        <label for="titulli">Postuesi</label>
+        <input type="text"  id="titulli" name="titulli" required placeholder="Shkruani emrin tuaj ">
 
         <label for="short_text">Permbledhja e shkurter</label>
         <textarea name="short_text" id="short_text"  required placeholder="Shkruani permbledhjen e shkurter"></textarea>

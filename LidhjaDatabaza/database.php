@@ -2,7 +2,7 @@
     $db_server = "localhost";
     $db_user = "root";
     $db_password = "";
-    $db_name = "maindatabase";
+    $db_name = "maindatabaze";
 
     $conn = ""; 
     // veq e inicializojme niher null tani e inicializojm posht me lidhje qe mos me pas naj error/konflikt
