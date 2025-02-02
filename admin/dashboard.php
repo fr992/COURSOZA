@@ -2,7 +2,7 @@
     session_start();
     include ('../LidhjaDatabaza/database.php');
 
-    $conn = new mysqli("localhost", "root", "", "lidhjatest");
+    $conn = new mysqli("localhost", "root", "", "maindatabase");
     if($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
     }
