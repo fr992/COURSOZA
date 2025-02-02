@@ -21,7 +21,7 @@
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="lendet.php">Ligjeratat</a></li>
+                <li><a href="ligjeratat.php">Ligjeratat</a></li>
                 <li><a href="ushtrimet.php">Ushtrimet</a></li>
                 <li><a href="njoftimet.php">Njoftime</a></li>
                 <li><a href="kuizindex.php">Kuizet</a></li>
@@ -78,17 +78,17 @@
     
         <div class="team-section">
             <div class="team-member">
-                <img src="/fotot/cr7.jpg" alt="Crew Member 1">
+                <img src="fotot/flori.jpg" alt="Crew Member 1">
                 <h4>Floridon Rama</h4>
                 <p>CEO & Founder</p>
             </div>
             <div class="team-member">
-                <img src="/fotot/cllevio.jpg" alt="Crew Member 2">
+                <img src="fotot/lorent.jpg" alt="Crew Member 2">
                 <h4>Lorent Tahiri</h4>
                 <p>Lead Developer</p>
             </div>
             <div class="team-member">
-                <img src="/fotot/kozi.jpg" alt="Crew Member 3">
+                <img src="fotot/edison.jpg" alt="Crew Member 3">
                 <h4>Edison Gegaj</h4>
                 <p>Chief Marketing Officer</p>
             </div>
@@ -100,42 +100,42 @@
         <div class="slider-container">
             <div class="slider">
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 1">
+                    <img src="fotot/algoritme.jpg" alt="Feature 1">
                     <h3>Feature 1</h3>
-                    <p>Description of feature 1.</p>
+                    <p>Materialism</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 2">
+                    <img src="fotot/ce.jpg" alt="Feature 2">
                     <h3>Feature 2</h3>
                     <p>Description of feature 2.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 3">
+                    <img src="fotot/cs.jpg" alt="Feature 3">
                     <h3>Feature 3</h3>
                     <p>Description of feature 3.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 4">
+                    <img src="fotot/csee.jpg" alt="Feature 4">
                     <h3>Feature 4</h3>
                     <p>Description of feature 4.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 5">
+                    <img src="fotot/css.jpg" alt="Feature 5">
                     <h3>Feature 5</h3>
                     <p>Description of feature 5.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 6">
+                    <img src="fotot/physic.jpg" alt="Feature 6">
                     <h3>Feature 6</h3>
                     <p>Description of feature 6.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 7">
+                    <img src="fotot/math.jpg" alt="Feature 7">
                     <h3>Feature 7</h3>
                     <p>Description of feature 7.</p>
                 </div>
                 <div class="box">
-                    <img src="/fotot/cllevio.jpg" alt="Feature 8">
+                    <img src="fotot/baz.jpg" alt="Feature 8">
                     <h3>Feature 8</h3>
                     <p>Description of feature 8.</p>
                 </div>

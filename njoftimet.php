@@ -23,9 +23,11 @@ $result = $conn->query($sql);
             </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.php">Ballina</a></li>
-                <li><a href="lendet.php">Lendet</a></li>
+            <li><a href="ligjeratat.php">Ligjeratat</a></li>
+                <li><a href="ushtrimet.php">Ushtrimet</a></li>
                 <li><a href="njoftimet.php" class="active">Njoftimet</a> </li>
+                <li><a href="kuizindex.php">Kuizet</a></li>
+                <li><a href="contactform.php">Contact Us</a></li>
             </ul>
         </nav>
         </div>
