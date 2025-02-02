@@ -10,23 +10,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Te gjitha fushat duhet te plotesohen.");
     }
 
-    $upload_dir = "postlendet/";
+    $upload_dir = "postlendet/"; 
     $file_path = $upload_dir . basename($file["name"]);
 
+    
+    if (!is_dir($upload_dir)) {
+        mkdir($upload_dir, 0777, true);
+    }
+
+    
     if (move_uploaded_file($file["tmp_name"], $file_path)) {
+        
         $stmt = $conn->prepare("INSERT INTO ligjeratat (lenda_id, titulli, file_path) VALUES (?, ?, ?)");
-        $stmt->bind_param("issi", $lenda_id, $titulli, $file_path);  // Këtu është shtuar admin_id
+        $stmt->bind_param("iss", $lenda_id, $titulli, $file_path);
 
         if ($stmt->execute()) {
-            echo "Ligjerata eshte shtuar me sukses!";
+            $upload_message = "Ligjerata eshte shtuar me sukses!";
         } else {
-            echo "Gabim: " . $stmt->error;
+            $upload_message = "Gabim: " . $stmt->error;
         }
-
 
         $stmt->close();
     } else {
-        echo "Ngarkimi i folderit deshtoi";
+        $upload_message = "Ngarkimi i folderit deshtoi";
     }
 
     $conn->close();
