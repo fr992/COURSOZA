@@ -17,11 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare("INSERT INTO ligjeratat (lenda_id, titulli, file_path) VALUES (?, ?, ?)");
         $stmt->bind_param("iss", $lenda_id, $titulli, $file_path);
 
-        if ($stmt->execute()) {
-            echo "Ligjërata u shtua me sukses!";
-        } else {
-            echo "Gabim: " . $stmt->error;
-        }
+
 
         $stmt->close();
     } else {
@@ -106,9 +102,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position fixed
+    position: fixed;
     left: 0;
-    right 0;
+    right: 0;
     border-bottom: 1.6px solid black;
     top: 0;
     height: 75px;
