@@ -78,33 +78,6 @@ function outputCSV($data, $database, $table, $output) {
 // export
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-        $database = $_POST['database'] ?? null;
-        $dateRange = $_POST['date_range'] ?? null;
-        
-        // kalkulo start - end
-        $startDate = null;
-        $endDate = date('Y-m-d H:i:s');  // date/time
-
-        if ($dateRange) {
-            $endDate = date('Y-m-d H:i:s');
-            switch ($dateRange) {
-                case '24h':
-                    $startDate = date('Y-m-d H:i:s', strtotime('-24 hours'));
-                    break;
-                case '3d':
-                    $startDate = date('Y-m-d H:i:s', strtotime('-3 days'));
-                    break;
-                case '7d':
-                    $startDate = date('Y-m-d H:i:s', strtotime('-7 days'));
-                    break;
-                case '30d':
-                    $startDate = date('Y-m-d H:i:s', strtotime('-30 days'));
-                    break;
-                case '60d':
-                    $startDate = date('Y-m-d H:i:s', strtotime('-60 days'));
-                    break;
-            }
-        }
 
         // downloadi
         $fileName = 'database_dump_' . date('Y-m-d_H-i-s') . '.csv';
@@ -152,31 +125,148 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Export Data</title>
     <style>
-        table {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;  
+            padding: 20px 20px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px; 
+            text-align: center;
+            flex-grow: 1; 
+            color: white;
+        }
+
+        header .back-btn1{
+            color: red;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        header .back-btn1:hover{
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        select {
             width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+
+        /* Button styling */
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+
+        /* Export buttons section */
+        .export-buttons {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .export-buttons h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Table styling */
+        table {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
             border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        table, th, td {
-            border: 1px solid black;
-        }
+
         th, td {
-            padding: 8px;
+            padding: 10px;
+            border: 1px solid #ddd;
             text-align: left;
         }
-        .form-container, .export-buttons {
-            margin-bottom: 20px;
+
+        th {
+            background-color: #333;
+            color: white;
         }
+
         footer {
-            margin-top: 30px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #333;
+            color: white;
             text-align: center;
             padding: 10px;
-            background: #f4f4f4;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Export Data from Databases</h1>
+        <a href="dashboard.php" class="back-btn1">Back</a>
+        <h1>Users Management System</h1>
     </header>
 
     <div class="form-container">
