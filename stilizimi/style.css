@@ -36,6 +36,10 @@ body {
     flex-wrap: wrap;
 }
 
+.priv-navbar .priv-navname{
+    margin-right: 50px;
+}
+
 .fixed {
     position: fixed;
     top: 0;
@@ -169,6 +173,9 @@ header .priv-navbar h2 {
         font-size: 1.6rem;
         top: 4%;
     }
+    .priv-navname {
+        margin-right: 30px;
+    }
     .awards-box {
         width: 176px;
         height: 160px;
@@ -225,6 +232,9 @@ header .priv-navbar h2 {
     .priv-navbar {
         padding: 12px 40px;
         padding-left: 50px;
+    }
+    .priv-navname {
+        margin-right: 50px;
     }
 
     .priv-navbar ul {
