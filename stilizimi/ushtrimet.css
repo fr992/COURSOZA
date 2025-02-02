@@ -60,6 +60,7 @@ header .priv-navbar h2 {
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-right: 50px;
     gap: 16px;
     flex-wrap: wrap;
     justify-content: center;

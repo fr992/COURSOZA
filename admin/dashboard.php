@@ -168,10 +168,10 @@
 <body>
     <div class="sidebar">
         <h2>Admin View</h2>
-        <a href="dashboard.php">Statistics</a>
+        <a href="exportdata.php">Statistics</a>
         <a href="manageusers.php" onclick="gotoUsersManage()">Register Users</a>
         <a href="njoftimeupload.php">Njoftimet</a>
-        <a href="">Lendet</a>
+        <a href="ligjeratatupload.php">Lendet</a>
         <a href="userlista.php">Users List</a>
         <a href="ushtrimeadmin.php">Materiali</a>
         <a href="adminmessages.php">Admin - Messages</a>

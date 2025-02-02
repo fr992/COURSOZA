@@ -22,9 +22,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="lendet.php">Lendet</a></li>
-                <li><a href="ushtrimet.html">Ushtrimet</a></li>
-                <li><a href="njoftimet.html">Njoftime</a></li>
-                <li><a href="kuizindex.html">Kuizet</a></li>
+                <li><a href="ushtrimet.php">Ushtrimet</a></li>
+                <li><a href="njoftimet.php">Njoftime</a></li>
+                <li><a href="kuizindex.php">Kuizet</a></li>
                 <li><a href="contactform.php">Contact Us</a></li>
             </ul>
             <div class="priv-signin">

@@ -15,9 +15,9 @@
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Ballina</a></li>
-                <li><a href="lendet.html">Lendet</a></li>
-                <li><a href="njoftimet.html">Njoftime</a></li>
+                <li><a href="index.php">Ballina</a></li>
+                <li><a href="ligjeratat.php">Lendet</a></li>
+                <li><a href="njoftimet.php">Njoftime</a></li>
             </ul>
         </div>
     </header>

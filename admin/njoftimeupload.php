@@ -133,7 +133,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         <label for="full_text">Teksti i plote</label>
         <textarea name="full_text" id="full_text" required placeholder="Shkruani tekstin e plot te njoftimit"></textarea>
 
-        <button type="submit">Publiko Njoftimin </button>
+        <button type="submit">Publiko Njoftimin</button>
     </form>
 </div>
 <footer>

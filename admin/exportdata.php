@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Export Data</title>
+    <title>Admin | Export Data</title>
     <style>
         * {
             margin: 0;
@@ -195,13 +195,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             background: #f9f9f9;
         }
 
-        /* Button styling */
         button {
             display: block;
             width: 100%;
             padding: 12px;
             margin-top: 10px;
-            background-color: #333;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
@@ -211,10 +210,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         button:hover {
-            background-color: #ff9900;
+            background-color:rgb(1, 71, 145);
         }
 
-        /* Export buttons section */
         .export-buttons {
             background: white;
             padding: 20px;
@@ -230,7 +228,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: #333;
         }
 
-        /* Table styling */
         table {
             width: 90%;
             max-width: 800px;
@@ -255,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             position: fixed;
             bottom: 0;
             width: 100%;
-            background: #333;
+            background:#343a40;
             color: white;
             text-align: center;
             padding: 10px;
@@ -266,7 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <header>
         <a href="dashboard.php" class="back-btn1">Back</a>
-        <h1>Users Management System</h1>
+        <h1>Export User Data</h1>
     </header>
 
     <div class="form-container">
@@ -320,7 +317,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <footer>
-        <p>&copy; 2025 Your Website | All Rights Reserved</p>
+        <p>&copy; 2025 COURSOZA | All Rights Reserved</p>
     </footer>
 </body>
 </html>

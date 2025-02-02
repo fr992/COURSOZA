@@ -101,7 +101,7 @@ $messages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <header>
         <a href="dashboard.php" class="back-btn1">Back</a>
-        <h1>Users Management System</h1>
+        <h1>Admin | Messages View</h1>
     </header>
     <div class="container">
         <?php

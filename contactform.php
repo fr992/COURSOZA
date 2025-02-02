@@ -184,9 +184,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <ul class="nav-links">
                 <li><a href="lendet.php">Lendet</a></li>
-                <li><a href="ushtrimet.html">Ushtrimet</a></li>
-                <li><a href="njoftimet.html">Njoftime</a></li>
-                <li><a href="kuizindex.html">Kuizet</a></li>
+                <li><a href="ushtrimet.php">Ushtrimet</a></li>
+                <li><a href="njoftimet.php">Njoftime</a></li>
+                <li><a href="kuizindex.php">Kuizet</a></li>
             </ul>
             <div class="priv-signin">
                 <a href="admin/login.php"><i class="login-logo fas fa-right-to-bracket" aria-label="Login"></i></a>

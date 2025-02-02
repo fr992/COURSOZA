@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="dashboard.php" class="back-btn1">Back</a>
         <h1>Users Management System</h1>
     </header>
-    <form action="admin_upload.php" method="POST" enctype="multipart/form-data">
+    <form action="ligjeratatupload.php" method="POST" enctype="multipart/form-data">
         <label for="lenda_id">Zgjidh Lenden:</label>
         <select id="lenda_id" name="lenda_id">
             <?php
