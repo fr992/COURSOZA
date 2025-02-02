@@ -7,30 +7,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file = $_FILES['file'];
 
     if (empty($lenda_id) || empty($titulli) || empty($file['name'])) {
-        die("Të gjitha fushat janë të detyrueshme.");
+        die("Te gjitha fushat duhet te plotesohen.");
     }
 
     $upload_dir = "postlendet/";
     $file_path = $upload_dir . basename($file["name"]);
 
     if (move_uploaded_file($file["tmp_name"], $file_path)) {
-        $stmt = $conn->prepare("INSERT INTO ligjeratat (lenda_id, titulli, file_path) VALUES (?, ?, ?)");
-        $stmt->bind_param("iss", $lenda_id, $titulli, $file_path);
+        $stmt = $conn->prepare("INSERT INTO ligjeratat (lenda_id, titulli, file_path, admin_id) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("issi", $lenda_id, $titulli, $file_path, $admin_id);  // Këtu është shtuar admin_id
 
         if ($stmt->execute()) {
-            echo "Ligjërata u shtua me sukses!";
+            echo "Ligjerata eshte shtuar me sukses!";
         } else {
             echo "Gabim: " . $stmt->error;
         }
 
         $stmt->close();
     } else {
-        echo "Ngarkimi i skedarit dështoi.";
+        echo "Ngarkimi i folderit deshtoi";
     }
 
     $conn->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
