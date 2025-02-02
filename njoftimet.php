@@ -22,12 +22,13 @@ $result = $conn->query($sql);
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
         <nav>
-            <ul class="nav-linksS">
+            <ul class="nav-links">
                 <li><a href="index.html">Ballina</a></li>
                 <li><a href="lendet.html">Lendet</a></li>
                 <li><a href="njoftimet.html" class="active">Njoftimet</a> </li>
             </ul>
         </nav>
+        </div>
     </header>
     <section id="notifications">
         <h2>Njoftimet </h2>
@@ -39,14 +40,14 @@ $result = $conn->query($sql);
                     <p class="short-text"><?= htmlspecialchars($row["short_text"]) ?></p>
                     <p class="full-text"><?= htmlspecialchars($row["full_text"]) ?></p>
                     <p class="time">Publikuar me: <?=htmlspecialchars($row["koha_publikimit"]) ?></p>
-            </div>
+                </div>
         <?php endwhile; ?>
     <?php else: ?>
-        <p>Ende nukkka njoftime.</p>
+        <p>Ende nuk ka njoftime.</p>
     <?php endif; ?>   
     </section>
     <footer>
-    <p>Copyright <a href="#">© WWW.COURSOZ.</a> All Rights Reserved</p>
+    <p>Copyright <a href="#">© WWW.COURSOZA.</a> All Rights Reserved</p>
     </footer>
     <script src="njoftime.js"></script>
 </body>

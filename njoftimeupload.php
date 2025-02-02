@@ -41,27 +41,33 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             padding: 0;
             background-color: white;
             color: #333;
+            flex-direction: column;
+            min-height: 100vh;
+            
+
         }
         .container {
-            max_width: 800;
+            max-width: 1000px;
             margin: 40px auto;
             background-color: white;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding-bottom: 130px;
+           
         }
         h1 {
             text-align: center;
             color: orange;
             font-size: 2em;
-            margin-botttom: 30px
+            margin-bottom: 30px;
         }
         form {
             display: flex;
             flex-direction: column;    
         }
         label {
-            margin: bottom 8p;
+            margin-bottom: 8px;
             font-weight: bold;
             color: #555;
         }
@@ -73,10 +79,12 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             border-radius: 4px;
             box-sizing: border-box;
             transition: border 0.3s ease;
+            resize: vertical;
+            max-width:100%;
         }
         input:focus, textarea:focus {
             border-color: orange;
-            outline: none:
+            outline: none;
         }
         button {
             background-color: orange;
@@ -86,16 +94,23 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: 0.3s ease;
         }
         button:hover {
             background-color: green;
         }
         button:active {
-            background-color: ;
+            background-color: darkorange;
         }
         footer {
-            
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            position: fixed;
         }
 
 
