@@ -170,9 +170,8 @@
         <h2>Admin View</h2>
         <a href="dashboard.php">Statistics</a>
         <a href="manageusers.php" onclick="gotoUsersManage()">Register Users</a>
-        <a href="">Reports</a>
-        <a href="admin_upload.php">Lendet</a>
-        <a href="">Njoftimet</a>
+        <a href="njoftimeupload.php">Njoftimet</a>
+        <a href="">Lendet</a>
         <a href="userlista.php">Users List</a>
         <a href="ushtrimeadmin.php">Materiali</a>
         <a href="adminmessages.php">Admin - Messages</a>

@@ -23,9 +23,9 @@ $result = $conn->query($sql);
             </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Ballina</a></li>
-                <li><a href="lendet.html">Lendet</a></li>
-                <li><a href="njoftimet.html" class="active">Njoftimet</a> </li>
+                <li><a href="index.php">Ballina</a></li>
+                <li><a href="lendet.php">Lendet</a></li>
+                <li><a href="njoftimet.php" class="active">Njoftimet</a> </li>
             </ul>
         </nav>
         </div>
