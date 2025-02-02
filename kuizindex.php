@@ -13,10 +13,10 @@
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="lendet.html">Lendet</a></li>
-                <li><a href="ushtrimet.html">Ushtrimet</a></li>
-                <li><a href="njoftimet.html">Njoftime</a></li>
-                <li><a href="kuizet.html">Kuizet</a></li>
+                <li><a href="ligjeratat.php">Lendet</a></li>
+                <li><a href="ushtrimet.php">Ushtrimet</a></li>
+                <li><a href="njoftimet.php">Njoftime</a></li>
+                <li><a href="kuizindex.php">Kuizet</a></li>
             </ul>
         </div>
     </header>

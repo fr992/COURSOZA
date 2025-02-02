@@ -36,6 +36,7 @@ body {
     border-bottom: 1.6px solid black;
     top: 0;
     height: 72px;
+    padding-right: 50px;
     padding: 8px 16px;
     background-color: rgb(34, 34, 34);
     flex-wrap: wrap;
@@ -45,7 +46,7 @@ body {
 }
 
 header .priv-navname {
-    flex: 1;
+    padding-right: 50px;
     display: flex;
     align-items: center;
 }

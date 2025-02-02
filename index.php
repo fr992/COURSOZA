@@ -21,7 +21,7 @@
                 <h2>COURS<span style="color: orange;">OZA</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="lendet.php">Lendet</a></li>
+                <li><a href="lendet.php">Ligjeratat</a></li>
                 <li><a href="ushtrimet.php">Ushtrimet</a></li>
                 <li><a href="njoftimet.php">Njoftime</a></li>
                 <li><a href="kuizindex.php">Kuizet</a></li>
@@ -102,7 +102,7 @@
                 <div class="box">
                     <img src="/fotot/cllevio.jpg" alt="Feature 1">
                     <h3>Feature 1</h3>
-                    <p>Materialism</p>
+                    <p>Description of feature 1.</p>
                 </div>
                 <div class="box">
                     <img src="/fotot/cllevio.jpg" alt="Feature 2">
